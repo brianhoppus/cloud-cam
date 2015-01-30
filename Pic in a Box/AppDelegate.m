@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <DropboxSDK/DropboxSDK.h>
 
 @interface AppDelegate ()
 
@@ -16,7 +17,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // Grab the application ID and secret key from the configuration.plist file
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"configuration" ofType:@"plist"];
+    NSDictionary *configuration = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+    NSString *appID = configuration[@"DropboxAPI"][@"AppID"];
+    NSString *appSecret = configuration[@"DropboxSecret"][@"AppSecret"];
+    
+    // Authenticate to Dropbox
+    DBSession *dbsession = [[DBSession alloc]
+                            initWithAppKey:appID
+                            appSecret:appSecret
+                            root:kDBRootDropbox];
+    [DBSession setSharedSession:dbsession];
+    
     return YES;
 }
 

@@ -17,6 +17,7 @@
 		D3E4E0AB1A7BE81A00BAAEEB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E4E0AA1A7BE81A00BAAEEB /* Security.framework */; };
 		D3E4E0AD1A7BE82000BAAEEB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E4E0AC1A7BE82000BAAEEB /* QuartzCore.framework */; };
 		D3E4E0B01A7BE88300BAAEEB /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E4E0AF1A7BE88300BAAEEB /* DropboxSDK.framework */; };
+		D3E4E0B21A7C417700BAAEEB /* configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3E4E0B11A7C417700BAAEEB /* configuration.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		D3E4E0AA1A7BE81A00BAAEEB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D3E4E0AC1A7BE82000BAAEEB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D3E4E0AF1A7BE88300BAAEEB /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
+		D3E4E0B11A7C417700BAAEEB /* configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = configuration.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		D3E4E0841A7BE77300BAAEEB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D3E4E0B11A7C417700BAAEEB /* configuration.plist */,
 				D3E4E0851A7BE77300BAAEEB /* Info.plist */,
 				D3E4E0861A7BE77300BAAEEB /* main.m */,
 			);
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3E4E0901A7BE77400BAAEEB /* Main.storyboard in Resources */,
+				D3E4E0B21A7C417700BAAEEB /* configuration.plist in Resources */,
 				D3E4E0951A7BE77400BAAEEB /* LaunchScreen.xib in Resources */,
 				D3E4E0921A7BE77400BAAEEB /* Images.xcassets in Resources */,
 			);
