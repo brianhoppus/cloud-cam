@@ -17,7 +17,11 @@
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P9a-1D-Hob">
                     <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                     <items>
-                        <barButtonItem title="Item" id="g4n-lh-BWX"/>
+                        <barButtonItem systemItem="camera" id="g4n-lh-BWX">
+                            <connections>
+                                <action selector="openCamera:" destination="-1" id="2ul-xe-wRO"/>
+                            </connections>
+                        </barButtonItem>
                     </items>
                 </toolbar>
             </subviews>
@@ -27,6 +31,7 @@
                 <constraint firstAttribute="bottom" secondItem="P9a-1D-Hob" secondAttribute="bottom" id="gEG-lW-LOJ"/>
                 <constraint firstItem="P9a-1D-Hob" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xll-VC-v0D"/>
             </constraints>
+            <point key="canvasLocation" x="-66" y="348"/>
         </view>
     </objects>
 </document>

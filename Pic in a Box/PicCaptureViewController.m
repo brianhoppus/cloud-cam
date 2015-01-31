@@ -8,7 +8,7 @@
 
 #import "PicCaptureViewController.h"
 
-@interface PicCaptureViewController ()
+@interface PicCaptureViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @end
 
@@ -33,5 +33,18 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)openCamera:(id)sender {
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePickerController.delegate = self;
+    
+    [self presentViewController:imagePickerController animated:YES completion:NULL];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 
 @end

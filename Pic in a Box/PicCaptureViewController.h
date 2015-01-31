@@ -10,4 +10,6 @@
 
 @interface PicCaptureViewController : UIViewController
 
+- (IBAction)openCamera:(id)sender;
+
 @end
