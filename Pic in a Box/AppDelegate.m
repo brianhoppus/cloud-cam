@@ -26,7 +26,7 @@
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"configuration" ofType:@"plist"];
     NSDictionary *configuration = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
     NSString *appID = configuration[@"DropboxAPI"][@"AppID"];
-    NSString *appSecret = configuration[@"DropboxSecret"][@"AppSecret"];
+    NSString *appSecret = configuration[@"DropboxAPI"][@"AppSecret"];
     
     // Authenticate to Dropbox
     DBSession *dbsession = [[DBSession alloc]
