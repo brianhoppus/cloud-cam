@@ -12,6 +12,8 @@
 
 @interface PicCaptureViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
+@property (strong, nonatomic) UIImage *image;
+
 @end
 
 @implementation PicCaptureViewController
@@ -44,13 +46,16 @@
     [self presentViewController:imagePickerController animated:YES completion:NULL];
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+- (void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     [self dismissViewControllerAnimated:YES completion:NULL];
     
     //create and display upload view
-    SendPicViewController *sendPicController = [[SendPicViewController alloc] init];
-    sendPicController.modalTransitionStyle = UIModalPresentationOverCurrentContext;
+    self.image = info[UIImagePickerControllerOriginalImage];
+    SendPicViewController *sendPicController = [[SendPicViewController alloc] initWithImage:self.image];
+    sendPicController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
     [self presentViewController:sendPicController animated:YES completion:NULL];
 }
 

@@ -10,5 +10,11 @@
 
 @interface SendPicViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) UIImage *image;
+
 - (IBAction)uploadPicture:(id)sender;
+- (instancetype)initWithImage:(UIImage *)image;
+
 @end

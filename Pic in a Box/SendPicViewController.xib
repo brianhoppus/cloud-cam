@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SendPicViewController">
             <connections>
+                <outlet property="imageView" destination="gkL-Lt-t0b" id="MTf-r4-pxV"/>
+                <outlet property="nameField" destination="YuX-cK-dvc" id="oHS-e4-EwB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,6 +16,20 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gkL-Lt-t0b">
+                    <rect key="frame" x="8" y="94" width="584" height="340"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picture Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UJ-lj-BzB">
+                    <rect key="frame" x="8" y="60" width="104" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YuX-cK-dvc">
+                    <rect key="frame" x="120" y="56" width="472" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdD-Wv-NMW">
                     <rect key="frame" x="221" y="479" width="159" height="30"/>
                     <color key="backgroundColor" red="0.392156899" green="0.91372555489999996" blue="0.66666668650000005" alpha="1" colorSpace="deviceRGB"/>
@@ -30,8 +46,17 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="gkL-Lt-t0b" firstAttribute="trailing" secondItem="YuX-cK-dvc" secondAttribute="trailing" id="0AZ-cA-sOy"/>
+                <constraint firstItem="gkL-Lt-t0b" firstAttribute="leading" secondItem="3UJ-lj-BzB" secondAttribute="leading" id="3Gc-fE-fBe"/>
+                <constraint firstItem="3UJ-lj-BzB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="K9z-I9-3M2"/>
+                <constraint firstAttribute="trailing" secondItem="YuX-cK-dvc" secondAttribute="trailing" constant="8" id="McT-xv-Dp9"/>
                 <constraint firstAttribute="bottom" secondItem="JdD-Wv-NMW" secondAttribute="bottom" constant="91" id="MwT-RW-O9S"/>
+                <constraint firstItem="3UJ-lj-BzB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="T9y-la-rEc"/>
+                <constraint firstItem="gkL-Lt-t0b" firstAttribute="top" secondItem="YuX-cK-dvc" secondAttribute="bottom" constant="8" symbolic="YES" id="WFs-4p-PlK"/>
+                <constraint firstItem="JdD-Wv-NMW" firstAttribute="top" secondItem="gkL-Lt-t0b" secondAttribute="bottom" constant="45" id="WY0-Jk-aZI"/>
+                <constraint firstItem="YuX-cK-dvc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="56" id="eog-fQ-JYQ"/>
                 <constraint firstItem="JdD-Wv-NMW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mo5-c1-toO"/>
+                <constraint firstItem="YuX-cK-dvc" firstAttribute="leading" secondItem="3UJ-lj-BzB" secondAttribute="trailing" constant="8" id="tav-S4-6KP"/>
             </constraints>
         </view>
     </objects>
