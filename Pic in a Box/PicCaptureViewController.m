@@ -7,6 +7,7 @@
 //
 
 #import "PicCaptureViewController.h"
+#import "SettingsViewController.h"
 
 @interface PicCaptureViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -40,6 +41,12 @@
     imagePickerController.delegate = self;
     
     [self presentViewController:imagePickerController animated:YES completion:NULL];
+}
+
+- (IBAction)openSetttings:(id)sender {
+    SettingsViewController *settingsViewController = [[SettingsViewController alloc] init];
+    settingsViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:settingsViewController animated:YES completion:NULL];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker

@@ -11,5 +11,6 @@
 @interface PicCaptureViewController : UIViewController
 
 - (IBAction)openCamera:(id)sender;
+- (IBAction)openSetttings:(id)sender;
 
 @end
