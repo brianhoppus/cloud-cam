@@ -37,19 +37,12 @@
                         <action selector="openSetttings:" destination="-1" eventType="touchUpInside" id="EN1-eK-DGb"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uDh-Jk-Ofy">
-                    <rect key="frame" x="65" y="118" width="470" height="321"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="ygA-eG-han" secondAttribute="bottom" constant="8" id="1fc-WM-u46"/>
-                <constraint firstItem="uDh-Jk-Ofy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="65" id="Afo-3H-Bby"/>
                 <constraint firstItem="ygA-eG-han" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="ILA-3v-aFl"/>
-                <constraint firstItem="uDh-Jk-Ofy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="118" id="V73-Zo-EfF"/>
                 <constraint firstItem="lBG-vn-v0Z" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dN9-ho-kdx"/>
-                <constraint firstItem="lBG-vn-v0Z" firstAttribute="top" secondItem="uDh-Jk-Ofy" secondAttribute="bottom" constant="36" id="eoz-qA-I4h"/>
-                <constraint firstAttribute="trailing" secondItem="uDh-Jk-Ofy" secondAttribute="trailing" constant="65" id="oe8-W4-kL3"/>
                 <constraint firstAttribute="bottom" secondItem="lBG-vn-v0Z" secondAttribute="bottom" constant="91" id="wjk-sf-tJt"/>
             </constraints>
             <point key="canvasLocation" x="-66" y="348"/>

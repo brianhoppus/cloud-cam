@@ -19,6 +19,8 @@
 		D3E6289D1A7C56B3002B35B7 /* PicCaptureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E6289B1A7C56B3002B35B7 /* PicCaptureViewController.xib */; };
 		D3E628A31A7D4E6A002B35B7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E628A11A7D4E6A002B35B7 /* SettingsViewController.m */; };
 		D3E628A41A7D4E6A002B35B7 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E628A21A7D4E6A002B35B7 /* SettingsViewController.xib */; };
+		D3E628A81A7D68CA002B35B7 /* SendPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E628A61A7D68CA002B35B7 /* SendPicViewController.m */; };
+		D3E628A91A7D68CA002B35B7 /* SendPicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E628A71A7D68CA002B35B7 /* SendPicViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		D3E628A01A7D4E6A002B35B7 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		D3E628A11A7D4E6A002B35B7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		D3E628A21A7D4E6A002B35B7 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		D3E628A51A7D68CA002B35B7 /* SendPicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendPicViewController.h; sourceTree = "<group>"; };
+		D3E628A61A7D68CA002B35B7 /* SendPicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendPicViewController.m; sourceTree = "<group>"; };
+		D3E628A71A7D68CA002B35B7 /* SendPicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendPicViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +153,7 @@
 			children = (
 				D3E6289B1A7C56B3002B35B7 /* PicCaptureViewController.xib */,
 				D3E628A21A7D4E6A002B35B7 /* SettingsViewController.xib */,
+				D3E628A71A7D68CA002B35B7 /* SendPicViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -159,6 +165,8 @@
 				D3E6289A1A7C56B3002B35B7 /* PicCaptureViewController.m */,
 				D3E628A01A7D4E6A002B35B7 /* SettingsViewController.h */,
 				D3E628A11A7D4E6A002B35B7 /* SettingsViewController.m */,
+				D3E628A51A7D68CA002B35B7 /* SendPicViewController.h */,
+				D3E628A61A7D68CA002B35B7 /* SendPicViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -247,6 +255,7 @@
 				D3E4E0B21A7C417700BAAEEB /* configuration.plist in Resources */,
 				D3E4E0921A7BE77400BAAEEB /* Images.xcassets in Resources */,
 				D3E628A41A7D4E6A002B35B7 /* SettingsViewController.xib in Resources */,
+				D3E628A91A7D68CA002B35B7 /* SendPicViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3E6289C1A7C56B3002B35B7 /* PicCaptureViewController.m in Sources */,
+				D3E628A81A7D68CA002B35B7 /* SendPicViewController.m in Sources */,
 				D3E4E08A1A7BE77300BAAEEB /* AppDelegate.m in Sources */,
 				D3E4E0871A7BE77300BAAEEB /* main.m in Sources */,
 				D3E628A31A7D4E6A002B35B7 /* SettingsViewController.m in Sources */,
