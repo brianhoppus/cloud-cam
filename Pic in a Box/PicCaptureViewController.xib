@@ -13,7 +13,20 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P9a-1D-Hob">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <items>
+                        <barButtonItem title="Item" id="g4n-lh-BWX"/>
+                    </items>
+                </toolbar>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="P9a-1D-Hob" secondAttribute="trailing" id="cfo-DY-MDt"/>
+                <constraint firstAttribute="bottom" secondItem="P9a-1D-Hob" secondAttribute="bottom" id="gEG-lW-LOJ"/>
+                <constraint firstItem="P9a-1D-Hob" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xll-VC-v0D"/>
+            </constraints>
         </view>
     </objects>
 </document>
