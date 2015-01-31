@@ -21,7 +21,6 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor clearColor];
-    [self.window makeKeyAndVisible];
     
     // Grab the application ID and secret key from the configuration.plist file
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"configuration" ofType:@"plist"];
@@ -35,6 +34,11 @@
                             appSecret:appSecret
                             root:kDBRootDropbox];
     [DBSession setSharedSession:dbsession];
+    
+    PicCaptureViewController *picCaptureVC = [[PicCaptureViewController alloc] init];
+    self.window.rootViewController = picCaptureVC;
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

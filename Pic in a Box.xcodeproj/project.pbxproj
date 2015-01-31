@@ -16,7 +16,7 @@
 		D3E4E0B01A7BE88300BAAEEB /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E4E0AF1A7BE88300BAAEEB /* DropboxSDK.framework */; };
 		D3E4E0B21A7C417700BAAEEB /* configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3E4E0B11A7C417700BAAEEB /* configuration.plist */; };
 		D3E6289C1A7C56B3002B35B7 /* PicCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E6289A1A7C56B3002B35B7 /* PicCaptureViewController.m */; };
-		D3E6289D1A7C56B3002B35B7 /* ImageCaptureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E6289B1A7C56B3002B35B7 /* ImageCaptureViewController.xib */; };
+		D3E6289D1A7C56B3002B35B7 /* PicCaptureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E6289B1A7C56B3002B35B7 /* PicCaptureViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,7 @@
 		D3E4E0B11A7C417700BAAEEB /* configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = configuration.plist; sourceTree = "<group>"; };
 		D3E628991A7C56B3002B35B7 /* PicCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicCaptureViewController.h; sourceTree = "<group>"; };
 		D3E6289A1A7C56B3002B35B7 /* PicCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicCaptureViewController.m; sourceTree = "<group>"; };
-		D3E6289B1A7C56B3002B35B7 /* ImageCaptureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCaptureViewController.xib; sourceTree = "<group>"; };
+		D3E6289B1A7C56B3002B35B7 /* PicCaptureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PicCaptureViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +141,7 @@
 		D3E6289E1A7C56BC002B35B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D3E6289B1A7C56B3002B35B7 /* ImageCaptureViewController.xib */,
+				D3E6289B1A7C56B3002B35B7 /* PicCaptureViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -235,7 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3E6289D1A7C56B3002B35B7 /* ImageCaptureViewController.xib in Resources */,
+				D3E6289D1A7C56B3002B35B7 /* PicCaptureViewController.xib in Resources */,
 				D3E4E0B21A7C417700BAAEEB /* configuration.plist in Resources */,
 				D3E4E0921A7BE77400BAAEEB /* Images.xcassets in Resources */,
 			);
