@@ -49,9 +49,9 @@
     [self dismissViewControllerAnimated:YES completion:NULL];
     
     //create and display upload view
-    SendPicViewController *sendPicControlller = [[SendPicViewController alloc] init];
-    sendPicControlller.modalTransitionStyle = UIModalPresentationOverCurrentContext;
-    [self presentViewController:sendPicControlller animated:YES completion:NULL];
+    SendPicViewController *sendPicController = [[SendPicViewController alloc] init];
+    sendPicController.modalTransitionStyle = UIModalPresentationOverCurrentContext;
+    [self presentViewController:sendPicController animated:YES completion:NULL];
 }
 
 - (IBAction)openSetttings:(id)sender {
