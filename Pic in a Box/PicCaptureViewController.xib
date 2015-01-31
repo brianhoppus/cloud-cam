@@ -14,22 +14,33 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P9a-1D-Hob">
-                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                    <items>
-                        <barButtonItem systemItem="camera" id="g4n-lh-BWX">
-                            <connections>
-                                <action selector="openCamera:" destination="-1" id="2ul-xe-wRO"/>
-                            </connections>
-                        </barButtonItem>
-                    </items>
-                </toolbar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBG-vn-v0Z">
+                    <rect key="frame" x="221" y="475" width="159" height="34"/>
+                    <color key="backgroundColor" red="0.39215689897537231" green="0.91372555494308472" blue="0.66666668653488159" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="159" id="Ebc-2k-TCh"/>
+                    </constraints>
+                    <state key="normal" title="Camera">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="openCamera:" destination="-1" eventType="touchUpInside" id="FSH-mg-JeX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygA-eG-han">
+                    <rect key="frame" x="535" y="562" width="57" height="30"/>
+                    <state key="normal" title="Settings">
+                        <color key="titleColor" red="0.39215689897537231" green="0.91372555494308472" blue="0.66666668653488159" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="P9a-1D-Hob" secondAttribute="trailing" id="cfo-DY-MDt"/>
-                <constraint firstAttribute="bottom" secondItem="P9a-1D-Hob" secondAttribute="bottom" id="gEG-lW-LOJ"/>
-                <constraint firstItem="P9a-1D-Hob" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xll-VC-v0D"/>
+                <constraint firstAttribute="trailing" secondItem="ygA-eG-han" secondAttribute="trailing" constant="8" id="KHc-Id-84y"/>
+                <constraint firstAttribute="bottom" secondItem="ygA-eG-han" secondAttribute="bottom" constant="8" id="XE8-Lt-LbV"/>
+                <constraint firstItem="lBG-vn-v0Z" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dN9-ho-kdx"/>
+                <constraint firstAttribute="bottom" secondItem="lBG-vn-v0Z" secondAttribute="bottom" constant="91" id="wjk-sf-tJt"/>
             </constraints>
             <point key="canvasLocation" x="-66" y="348"/>
         </view>
