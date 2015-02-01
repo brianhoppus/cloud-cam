@@ -4,6 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SendPicViewController">
@@ -21,14 +22,8 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gkL-Lt-t0b">
                     <rect key="frame" x="8" y="94" width="584" height="340"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picture Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UJ-lj-BzB">
-                    <rect key="frame" x="8" y="60" width="104" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter  Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YuX-cK-dvc">
-                    <rect key="frame" x="120" y="56" width="472" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Picture Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YuX-cK-dvc">
+                    <rect key="frame" x="8" y="56" width="584" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES"/>
                 </textField>
@@ -65,20 +60,18 @@
                 <constraint firstItem="gkL-Lt-t0b" firstAttribute="trailing" secondItem="YuX-cK-dvc" secondAttribute="trailing" id="0AZ-cA-sOy"/>
                 <constraint firstItem="JdD-Wv-NMW" firstAttribute="baseline" secondItem="xCQ-ca-pob" secondAttribute="firstBaseline" id="0EK-RZ-mba"/>
                 <constraint firstItem="JdD-Wv-NMW" firstAttribute="top" secondItem="xCQ-ca-pob" secondAttribute="top" id="29l-sb-15B"/>
-                <constraint firstItem="gkL-Lt-t0b" firstAttribute="leading" secondItem="3UJ-lj-BzB" secondAttribute="leading" id="3Gc-fE-fBe"/>
                 <constraint firstAttribute="centerX" secondItem="JdD-Wv-NMW" secondAttribute="centerX" constant="79.5" id="E9d-Im-Rd5"/>
                 <constraint firstItem="JdD-Wv-NMW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="110" id="I3n-if-FNk"/>
-                <constraint firstItem="3UJ-lj-BzB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="K9z-I9-3M2"/>
                 <constraint firstAttribute="trailing" secondItem="YuX-cK-dvc" secondAttribute="trailing" constant="8" id="McT-xv-Dp9"/>
-                <constraint firstItem="3UJ-lj-BzB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="T9y-la-rEc"/>
                 <constraint firstItem="gkL-Lt-t0b" firstAttribute="top" secondItem="YuX-cK-dvc" secondAttribute="bottom" constant="8" symbolic="YES" id="WFs-4p-PlK"/>
+                <constraint firstItem="gkL-Lt-t0b" firstAttribute="leading" secondItem="YuX-cK-dvc" secondAttribute="leading" id="Z2k-PP-fRo"/>
                 <constraint firstItem="JdD-Wv-NMW" firstAttribute="top" secondItem="gkL-Lt-t0b" secondAttribute="bottom" constant="22" id="aRC-FO-Fdo"/>
                 <constraint firstAttribute="bottom" secondItem="JdD-Wv-NMW" secondAttribute="bottom" constant="110" id="dog-rY-LTt"/>
                 <constraint firstItem="xCQ-ca-pob" firstAttribute="baseline" secondItem="JdD-Wv-NMW" secondAttribute="firstBaseline" id="eNx-rH-ZQc"/>
                 <constraint firstItem="YuX-cK-dvc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="56" id="eog-fQ-JYQ"/>
+                <constraint firstItem="gkL-Lt-t0b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="i7h-oc-cBC"/>
                 <constraint firstAttribute="centerX" secondItem="xCQ-ca-pob" secondAttribute="centerX" constant="-80.5" id="ijs-34-KO5"/>
                 <constraint firstItem="xCQ-ca-pob" firstAttribute="leading" secondItem="JdD-Wv-NMW" secondAttribute="trailing" constant="35" id="s9c-pB-cmL"/>
-                <constraint firstItem="YuX-cK-dvc" firstAttribute="leading" secondItem="3UJ-lj-BzB" secondAttribute="trailing" constant="8" id="tav-S4-6KP"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
