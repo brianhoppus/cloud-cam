@@ -18,6 +18,7 @@
 
 - (IBAction)uploadPicture:(id)sender;
 - (IBAction)cancelUpload:(id)sender;
+- (IBAction)cancelInput:(id)sender;
 - (instancetype)initWithImage:(UIImage *)image;
 
 @end

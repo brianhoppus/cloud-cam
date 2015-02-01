@@ -74,6 +74,10 @@
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
+- (IBAction)cancelInput:(id)sender {
+    [self.view endEditing:YES];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self.nameField resignFirstResponder];

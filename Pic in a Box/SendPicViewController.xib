@@ -84,6 +84,9 @@
                     <exclude reference="JmS-Hm-aQ1"/>
                 </mask>
             </variation>
+            <connections>
+                <action selector="cancelInput:" destination="-1" eventType="touchUpInside" id="Le3-Km-kI3"/>
+            </connections>
             <point key="canvasLocation" x="562" y="391"/>
         </view>
     </objects>
