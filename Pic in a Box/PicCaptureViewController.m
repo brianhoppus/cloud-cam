@@ -21,6 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.cameraButton.layer.cornerRadius = 2;
+    self.cameraButton.layer.borderWidth = 1;
+    self.cameraButton.layer.borderColor = (__bridge CGColorRef)(self.cameraButton.backgroundColor);
 }
 
 - (void)didReceiveMemoryWarning {

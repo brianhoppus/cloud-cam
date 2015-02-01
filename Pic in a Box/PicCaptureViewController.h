@@ -10,6 +10,8 @@
 
 @interface PicCaptureViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *cameraButton;
+
 - (IBAction)openCamera:(id)sender;
 - (IBAction)openSetttings:(id)sender;
 

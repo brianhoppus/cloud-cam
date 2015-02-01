@@ -12,6 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIButton *uploadButton;
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (strong, nonatomic) UIImage *image;
 
 - (IBAction)uploadPicture:(id)sender;

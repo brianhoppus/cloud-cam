@@ -24,6 +24,8 @@
     self.restClient.delegate = self;
     self.nameField.delegate = self;
     
+    [self setButtonStyle:self.uploadButton];
+    [self setButtonStyle:self.cancelButton];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -84,6 +86,13 @@
           metadata:(DBMetadata *)metadata
 {
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)setButtonStyle:(UIButton *)button
+{
+    button.layer.cornerRadius = 2;
+    button.layer.borderWidth = 1;
+    button.layer.borderColor = (__bridge CGColorRef)(button.backgroundColor);
 }
 
 @end

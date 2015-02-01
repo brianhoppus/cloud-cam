@@ -7,8 +7,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SendPicViewController">
             <connections>
+                <outlet property="cancelButton" destination="xCQ-ca-pob" id="h4A-Im-Jmn"/>
                 <outlet property="imageView" destination="gkL-Lt-t0b" id="MTf-r4-pxV"/>
                 <outlet property="nameField" destination="YuX-cK-dvc" id="oHS-e4-EwB"/>
+                <outlet property="uploadButton" destination="JdD-Wv-NMW" id="gtM-62-Mqb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
