@@ -2,8 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -21,20 +19,26 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gkL-Lt-t0b">
                     <rect key="frame" x="8" y="94" width="584" height="340"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="340" id="ZOh-nv-Dwk"/>
+                    </constraints>
                 </imageView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Picture Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YuX-cK-dvc">
                     <rect key="frame" x="8" y="56" width="584" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="pSf-Ab-NqH"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdD-Wv-NMW">
-                    <rect key="frame" x="158" y="456" width="125" height="34"/>
+                    <rect key="frame" x="333" y="496" width="125" height="44"/>
                     <color key="backgroundColor" red="0.392156899" green="0.91372555489999996" blue="0.66666668650000005" alpha="1" colorSpace="deviceRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="34" id="Y4h-Si-hCo"/>
-                        <constraint firstAttribute="width" constant="125" id="dbH-Lb-BJr"/>
+                        <constraint firstAttribute="height" constant="44" id="2gQ-fS-5hH"/>
+                        <constraint firstAttribute="width" constant="125" id="Snv-tP-q3d"/>
                     </constraints>
-                    <state key="normal" title="Upload Picture">
+                    <state key="normal" title="Upload">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -42,10 +46,11 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCQ-ca-pob">
-                    <rect key="frame" x="318" y="456" width="125" height="34"/>
+                    <rect key="frame" x="142" y="496" width="125" height="44"/>
                     <color key="backgroundColor" red="0.88627457618713379" green="0.4745098352432251" blue="0.39215689897537231" alpha="1" colorSpace="deviceRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="125" id="bx5-Zz-EiJ"/>
+                        <constraint firstAttribute="width" constant="125" id="cbj-Js-9a5"/>
+                        <constraint firstAttribute="height" constant="44" id="f6c-7a-km4"/>
                     </constraints>
                     <state key="normal" title="Cancel">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,24 +63,23 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="gkL-Lt-t0b" firstAttribute="trailing" secondItem="YuX-cK-dvc" secondAttribute="trailing" id="0AZ-cA-sOy"/>
-                <constraint firstItem="JdD-Wv-NMW" firstAttribute="baseline" secondItem="xCQ-ca-pob" secondAttribute="firstBaseline" id="0EK-RZ-mba"/>
-                <constraint firstItem="JdD-Wv-NMW" firstAttribute="top" secondItem="xCQ-ca-pob" secondAttribute="top" id="29l-sb-15B"/>
-                <constraint firstAttribute="centerX" secondItem="JdD-Wv-NMW" secondAttribute="centerX" constant="79.5" id="E9d-Im-Rd5"/>
+                <constraint firstItem="JdD-Wv-NMW" firstAttribute="centerY" secondItem="xCQ-ca-pob" secondAttribute="centerY" id="1Vg-9r-Jkh"/>
                 <constraint firstItem="JdD-Wv-NMW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="110" id="I3n-if-FNk"/>
+                <constraint firstItem="JdD-Wv-NMW" firstAttribute="centerX" secondItem="xCQ-ca-pob" secondAttribute="centerX" id="JmS-Hm-aQ1"/>
                 <constraint firstAttribute="trailing" secondItem="YuX-cK-dvc" secondAttribute="trailing" constant="8" id="McT-xv-Dp9"/>
+                <constraint firstItem="JdD-Wv-NMW" firstAttribute="top" secondItem="gkL-Lt-t0b" secondAttribute="bottom" constant="62" id="P8N-5h-gPw"/>
+                <constraint firstAttribute="centerX" secondItem="xCQ-ca-pob" secondAttribute="centerX" constant="95.5" id="U4x-dE-JbX"/>
                 <constraint firstItem="gkL-Lt-t0b" firstAttribute="top" secondItem="YuX-cK-dvc" secondAttribute="bottom" constant="8" symbolic="YES" id="WFs-4p-PlK"/>
+                <constraint firstAttribute="bottom" secondItem="JdD-Wv-NMW" secondAttribute="bottom" constant="60" id="YuG-w1-4eF"/>
                 <constraint firstItem="gkL-Lt-t0b" firstAttribute="leading" secondItem="YuX-cK-dvc" secondAttribute="leading" id="Z2k-PP-fRo"/>
-                <constraint firstItem="JdD-Wv-NMW" firstAttribute="top" secondItem="gkL-Lt-t0b" secondAttribute="bottom" constant="22" id="aRC-FO-Fdo"/>
-                <constraint firstAttribute="bottom" secondItem="JdD-Wv-NMW" secondAttribute="bottom" constant="110" id="dog-rY-LTt"/>
-                <constraint firstItem="xCQ-ca-pob" firstAttribute="baseline" secondItem="JdD-Wv-NMW" secondAttribute="firstBaseline" id="eNx-rH-ZQc"/>
                 <constraint firstItem="YuX-cK-dvc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="56" id="eog-fQ-JYQ"/>
                 <constraint firstItem="gkL-Lt-t0b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="i7h-oc-cBC"/>
-                <constraint firstAttribute="centerX" secondItem="xCQ-ca-pob" secondAttribute="centerX" constant="-80.5" id="ijs-34-KO5"/>
-                <constraint firstItem="xCQ-ca-pob" firstAttribute="leading" secondItem="JdD-Wv-NMW" secondAttribute="trailing" constant="35" id="s9c-pB-cmL"/>
+                <constraint firstItem="JdD-Wv-NMW" firstAttribute="leading" secondItem="xCQ-ca-pob" secondAttribute="trailing" constant="66" id="kVI-0n-xeW"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="I3n-if-FNk"/>
+                    <exclude reference="JmS-Hm-aQ1"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="562" y="391"/>
