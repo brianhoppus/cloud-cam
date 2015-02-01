@@ -15,6 +15,7 @@
 @property (strong, nonatomic) UIImage *image;
 
 - (IBAction)uploadPicture:(id)sender;
+- (IBAction)cancelUpload:(id)sender;
 - (instancetype)initWithImage:(UIImage *)image;
 
 @end

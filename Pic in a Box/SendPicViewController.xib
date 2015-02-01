@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SendPicViewController">
@@ -31,10 +33,11 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdD-Wv-NMW">
-                    <rect key="frame" x="221" y="479" width="159" height="30"/>
+                    <rect key="frame" x="158" y="456" width="125" height="34"/>
                     <color key="backgroundColor" red="0.392156899" green="0.91372555489999996" blue="0.66666668650000005" alpha="1" colorSpace="deviceRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="159" id="9r7-lK-bS1"/>
+                        <constraint firstAttribute="height" constant="34" id="Y4h-Si-hCo"/>
+                        <constraint firstAttribute="width" constant="125" id="dbH-Lb-BJr"/>
                     </constraints>
                     <state key="normal" title="Upload Picture">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,21 +46,45 @@
                         <action selector="uploadPicture:" destination="-1" eventType="touchUpInside" id="5Br-R3-eFV"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCQ-ca-pob">
+                    <rect key="frame" x="318" y="456" width="125" height="34"/>
+                    <color key="backgroundColor" red="0.88627457618713379" green="0.4745098352432251" blue="0.39215689897537231" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="125" id="bx5-Zz-EiJ"/>
+                    </constraints>
+                    <state key="normal" title="Cancel">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="cancelUpload:" destination="-1" eventType="touchUpInside" id="gBC-sc-JYq"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="gkL-Lt-t0b" firstAttribute="trailing" secondItem="YuX-cK-dvc" secondAttribute="trailing" id="0AZ-cA-sOy"/>
+                <constraint firstItem="JdD-Wv-NMW" firstAttribute="baseline" secondItem="xCQ-ca-pob" secondAttribute="firstBaseline" id="0EK-RZ-mba"/>
+                <constraint firstItem="JdD-Wv-NMW" firstAttribute="top" secondItem="xCQ-ca-pob" secondAttribute="top" id="29l-sb-15B"/>
                 <constraint firstItem="gkL-Lt-t0b" firstAttribute="leading" secondItem="3UJ-lj-BzB" secondAttribute="leading" id="3Gc-fE-fBe"/>
+                <constraint firstAttribute="centerX" secondItem="JdD-Wv-NMW" secondAttribute="centerX" constant="79.5" id="E9d-Im-Rd5"/>
+                <constraint firstItem="JdD-Wv-NMW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="110" id="I3n-if-FNk"/>
                 <constraint firstItem="3UJ-lj-BzB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="K9z-I9-3M2"/>
                 <constraint firstAttribute="trailing" secondItem="YuX-cK-dvc" secondAttribute="trailing" constant="8" id="McT-xv-Dp9"/>
-                <constraint firstAttribute="bottom" secondItem="JdD-Wv-NMW" secondAttribute="bottom" constant="91" id="MwT-RW-O9S"/>
                 <constraint firstItem="3UJ-lj-BzB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="T9y-la-rEc"/>
                 <constraint firstItem="gkL-Lt-t0b" firstAttribute="top" secondItem="YuX-cK-dvc" secondAttribute="bottom" constant="8" symbolic="YES" id="WFs-4p-PlK"/>
-                <constraint firstItem="JdD-Wv-NMW" firstAttribute="top" secondItem="gkL-Lt-t0b" secondAttribute="bottom" constant="45" id="WY0-Jk-aZI"/>
+                <constraint firstItem="JdD-Wv-NMW" firstAttribute="top" secondItem="gkL-Lt-t0b" secondAttribute="bottom" constant="22" id="aRC-FO-Fdo"/>
+                <constraint firstAttribute="bottom" secondItem="JdD-Wv-NMW" secondAttribute="bottom" constant="110" id="dog-rY-LTt"/>
+                <constraint firstItem="xCQ-ca-pob" firstAttribute="baseline" secondItem="JdD-Wv-NMW" secondAttribute="firstBaseline" id="eNx-rH-ZQc"/>
                 <constraint firstItem="YuX-cK-dvc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="56" id="eog-fQ-JYQ"/>
-                <constraint firstItem="JdD-Wv-NMW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mo5-c1-toO"/>
+                <constraint firstAttribute="centerX" secondItem="xCQ-ca-pob" secondAttribute="centerX" constant="-80.5" id="ijs-34-KO5"/>
+                <constraint firstItem="xCQ-ca-pob" firstAttribute="leading" secondItem="JdD-Wv-NMW" secondAttribute="trailing" constant="35" id="s9c-pB-cmL"/>
                 <constraint firstItem="YuX-cK-dvc" firstAttribute="leading" secondItem="3UJ-lj-BzB" secondAttribute="trailing" constant="8" id="tav-S4-6KP"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="I3n-if-FNk"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="562" y="391"/>
         </view>
     </objects>

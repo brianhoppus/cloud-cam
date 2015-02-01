@@ -68,6 +68,10 @@
                        fromPath:file];
 }
 
+- (IBAction)cancelUpload:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self.nameField resignFirstResponder];
