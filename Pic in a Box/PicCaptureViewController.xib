@@ -15,10 +15,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBG-vn-v0Z">
-                    <rect key="frame" x="221" y="475" width="159" height="34"/>
+                    <rect key="frame" x="221" y="465" width="159" height="44"/>
                     <color key="backgroundColor" red="0.39215689897537231" green="0.91372555494308472" blue="0.66666668653488159" alpha="1" colorSpace="deviceRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="159" id="Ebc-2k-TCh"/>
+                        <constraint firstAttribute="height" constant="44" id="WBa-UR-1ao"/>
                     </constraints>
                     <state key="normal" title="Camera">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
