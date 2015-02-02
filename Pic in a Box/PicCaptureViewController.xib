@@ -15,37 +15,37 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBG-vn-v0Z">
-                    <rect key="frame" x="221" y="465" width="159" height="44"/>
-                    <color key="backgroundColor" red="0.39215689897537231" green="0.91372555494308472" blue="0.66666668653488159" alpha="1" colorSpace="deviceRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="159" id="Ebc-2k-TCh"/>
-                        <constraint firstAttribute="height" constant="44" id="WBa-UR-1ao"/>
-                    </constraints>
-                    <state key="normal" title="Camera">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="openCamera:" destination="-1" eventType="touchUpInside" id="FSH-mg-JeX"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygA-eG-han">
                     <rect key="frame" x="8" y="562" width="57" height="30"/>
                     <state key="normal" title="Settings">
-                        <color key="titleColor" red="0.39215689897537231" green="0.91372555494308472" blue="0.66666668653488159" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="openSetttings:" destination="-1" eventType="touchUpInside" id="EN1-eK-DGb"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBG-vn-v0Z">
+                    <rect key="frame" x="221" y="278" width="159" height="44"/>
+                    <color key="backgroundColor" red="0.83921568627450982" green="0.97647058823529409" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Unp-qj-fe5"/>
+                        <constraint firstAttribute="width" constant="159" id="bg6-4Y-npy"/>
+                    </constraints>
+                    <state key="normal" title="Camera">
+                        <color key="titleColor" red="0.392156899" green="0.91372555489999996" blue="0.66666668650000005" alpha="1" colorSpace="deviceRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="openCamera:" destination="-1" eventType="touchUpInside" id="FSH-mg-JeX"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.392156899" green="0.91372555489999996" blue="0.66666668650000005" alpha="1" colorSpace="deviceRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="ygA-eG-han" secondAttribute="bottom" constant="8" id="1fc-WM-u46"/>
+                <constraint firstItem="lBG-vn-v0Z" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="E4d-dn-nSt"/>
                 <constraint firstItem="ygA-eG-han" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="ILA-3v-aFl"/>
-                <constraint firstItem="lBG-vn-v0Z" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dN9-ho-kdx"/>
-                <constraint firstAttribute="bottom" secondItem="lBG-vn-v0Z" secondAttribute="bottom" constant="91" id="wjk-sf-tJt"/>
+                <constraint firstItem="lBG-vn-v0Z" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="yS2-WC-UW4"/>
             </constraints>
             <point key="canvasLocation" x="-66" y="348"/>
         </view>
