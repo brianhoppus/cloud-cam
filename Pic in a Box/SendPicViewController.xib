@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -19,64 +21,60 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gkL-Lt-t0b">
-                    <rect key="frame" x="8" y="94" width="584" height="340"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="340" id="ZOh-nv-Dwk"/>
-                    </constraints>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gkL-Lt-t0b">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Picture Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YuX-cK-dvc">
-                    <rect key="frame" x="8" y="56" width="584" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="pSf-Ab-NqH"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <rect key="frame" x="8" y="22" width="584" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="deviceRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdD-Wv-NMW">
-                    <rect key="frame" x="333" y="496" width="125" height="44"/>
-                    <color key="backgroundColor" red="0.392156899" green="0.91372555489999996" blue="0.66666668650000005" alpha="1" colorSpace="deviceRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="44" id="2gQ-fS-5hH"/>
-                        <constraint firstAttribute="width" constant="125" id="Snv-tP-q3d"/>
-                    </constraints>
-                    <state key="normal" title="Upload">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="uploadPicture:" destination="-1" eventType="touchUpInside" id="5Br-R3-eFV"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCQ-ca-pob">
-                    <rect key="frame" x="142" y="496" width="125" height="44"/>
-                    <color key="backgroundColor" red="0.88627457618713379" green="0.4745098352432251" blue="0.39215689897537231" alpha="1" colorSpace="deviceRGB"/>
+                    <rect key="frame" x="142" y="535" width="125" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="deviceRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="125" id="cbj-Js-9a5"/>
                         <constraint firstAttribute="height" constant="44" id="f6c-7a-km4"/>
                     </constraints>
                     <state key="normal" title="Cancel">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="0.88627457620000005" green="0.47450983520000001" blue="0.392156899" alpha="1" colorSpace="deviceRGB"/>
                     </state>
                     <connections>
                         <action selector="cancelUpload:" destination="-1" eventType="touchUpInside" id="gBC-sc-JYq"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdD-Wv-NMW">
+                    <rect key="frame" x="333" y="535" width="125" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="125" id="2FT-qG-t4R"/>
+                    </constraints>
+                    <state key="normal" title="Upload">
+                        <color key="titleColor" red="0.392156899" green="0.91372555489999996" blue="0.66666668650000005" alpha="1" colorSpace="deviceRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="uploadPicture:" destination="-1" eventType="touchUpInside" id="5Br-R3-eFV"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="gkL-Lt-t0b" firstAttribute="trailing" secondItem="YuX-cK-dvc" secondAttribute="trailing" id="0AZ-cA-sOy"/>
-                <constraint firstItem="JdD-Wv-NMW" firstAttribute="centerY" secondItem="xCQ-ca-pob" secondAttribute="centerY" id="1Vg-9r-Jkh"/>
+                <constraint firstAttribute="bottom" secondItem="JdD-Wv-NMW" secondAttribute="bottom" constant="21" id="3bb-28-0x4"/>
+                <constraint firstItem="JdD-Wv-NMW" firstAttribute="leading" secondItem="xCQ-ca-pob" secondAttribute="trailing" constant="66" id="40B-W2-O8i"/>
                 <constraint firstItem="JdD-Wv-NMW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="110" id="I3n-if-FNk"/>
                 <constraint firstItem="JdD-Wv-NMW" firstAttribute="centerX" secondItem="xCQ-ca-pob" secondAttribute="centerX" id="JmS-Hm-aQ1"/>
-                <constraint firstAttribute="trailing" secondItem="YuX-cK-dvc" secondAttribute="trailing" constant="8" id="McT-xv-Dp9"/>
-                <constraint firstItem="JdD-Wv-NMW" firstAttribute="top" secondItem="gkL-Lt-t0b" secondAttribute="bottom" constant="62" id="P8N-5h-gPw"/>
+                <constraint firstItem="YuX-cK-dvc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="22" id="Lmx-bb-DpU"/>
                 <constraint firstAttribute="centerX" secondItem="xCQ-ca-pob" secondAttribute="centerX" constant="95.5" id="U4x-dE-JbX"/>
-                <constraint firstItem="gkL-Lt-t0b" firstAttribute="top" secondItem="YuX-cK-dvc" secondAttribute="bottom" constant="8" symbolic="YES" id="WFs-4p-PlK"/>
-                <constraint firstAttribute="bottom" secondItem="JdD-Wv-NMW" secondAttribute="bottom" constant="60" id="YuG-w1-4eF"/>
-                <constraint firstItem="gkL-Lt-t0b" firstAttribute="leading" secondItem="YuX-cK-dvc" secondAttribute="leading" id="Z2k-PP-fRo"/>
-                <constraint firstItem="YuX-cK-dvc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="56" id="eog-fQ-JYQ"/>
-                <constraint firstItem="gkL-Lt-t0b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="i7h-oc-cBC"/>
-                <constraint firstItem="JdD-Wv-NMW" firstAttribute="leading" secondItem="xCQ-ca-pob" secondAttribute="trailing" constant="66" id="kVI-0n-xeW"/>
+                <constraint firstItem="YuX-cK-dvc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="UXS-2o-ecu"/>
+                <constraint firstItem="JdD-Wv-NMW" firstAttribute="top" secondItem="xCQ-ca-pob" secondAttribute="top" id="WXn-N8-0Si"/>
+                <constraint firstItem="JdD-Wv-NMW" firstAttribute="baseline" secondItem="xCQ-ca-pob" secondAttribute="firstBaseline" id="eR9-mg-YS3"/>
+                <constraint firstItem="gkL-Lt-t0b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="iHr-os-rGg"/>
+                <constraint firstAttribute="trailing" secondItem="gkL-Lt-t0b" secondAttribute="trailing" id="jXT-zC-a9m"/>
+                <constraint firstItem="JdD-Wv-NMW" firstAttribute="firstBaseline" secondItem="xCQ-ca-pob" secondAttribute="baseline" id="mJs-Xh-8GJ"/>
+                <constraint firstItem="gkL-Lt-t0b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="miB-nd-mQM"/>
+                <constraint firstItem="YuX-cK-dvc" firstAttribute="centerX" secondItem="gkL-Lt-t0b" secondAttribute="centerX" id="sRM-LK-aMe"/>
+                <constraint firstAttribute="bottom" secondItem="gkL-Lt-t0b" secondAttribute="bottom" id="vQj-Cg-wdU"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">

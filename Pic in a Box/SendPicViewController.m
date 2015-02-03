@@ -26,6 +26,13 @@
     
     [self setButtonStyle:self.uploadButton];
     [self setButtonStyle:self.cancelButton];
+    
+    self.uploadButton.layer.cornerRadius = 4;
+    self.uploadButton.layer.borderWidth = 1;
+    self.uploadButton.layer.borderColor = (__bridge CGColorRef)(self.uploadButton.backgroundColor);
+    self.cancelButton.layer.cornerRadius = 4;
+    self.cancelButton.layer.borderWidth = 1;
+    self.cancelButton.layer.borderColor = (__bridge CGColorRef)(self.cancelButton.backgroundColor);
 }
 
 - (void)viewWillAppear:(BOOL)animated
