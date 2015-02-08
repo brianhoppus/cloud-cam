@@ -11,6 +11,7 @@
 @interface CameraViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *captureButton;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 - (IBAction)cancelPhotograph:(id)sender;
 - (IBAction)captureImage:(id)sender;

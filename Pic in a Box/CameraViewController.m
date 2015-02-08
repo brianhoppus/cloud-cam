@@ -8,13 +8,18 @@
 
 #import "CameraViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "DropboxSDK/DropboxSDK.h"
 
-@interface CameraViewController ()
+@interface CameraViewController () <DBRestClientDelegate>
 
 @property (strong, nonatomic) AVCaptureSession *session;
 @property (strong, nonatomic) AVCaptureDevice *cameraDevice;
 @property (strong, nonatomic) AVCaptureDeviceInput *deviceInput;
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer *previewLayer;
+@property (strong, nonatomic) AVCaptureStillImageOutput *stillImageOutput;
+@property (strong, nonatomic) UIImage *image;
+@property (nonatomic) BOOL imageCaptured;
+@property (strong, nonatomic) DBRestClient *restClient;
 
 @end
 
@@ -22,6 +27,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
+    self.restClient.delegate = self;
 
     NSError *error;
     
@@ -42,6 +50,12 @@
     [rootLayer setMasksToBounds:YES];
     [self.previewLayer setFrame:CGRectMake(0, 0, rootLayer.bounds.size.width, rootLayer.bounds.size.height)];
     [rootLayer insertSublayer:self.previewLayer atIndex:0];
+    
+    self.stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
+    NSDictionary *outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys:AVVideoCodecJPEG, AVVideoCodecKey, nil];
+    [self.stillImageOutput setOutputSettings:outputSettings];
+    
+    [self.session addOutput:self.stillImageOutput];
     
     [self.session startRunning];
 }
@@ -70,10 +84,61 @@
     // The button starts out labeled as "Capture", you take a picture, and then the button is relabled "Upload".
     // Hitting the button again will upload the image, and dismiss the view controller.
     if (![self.captureButton.titleLabel.text  isEqual: @"Capture"]) {
-        [self dismissViewControllerAnimated:YES completion:NULL];
+//        [self dismissViewControllerAnimated:YES completion:NULL];
+        [self uploadPicture:self.image];
     } else {
         [self.captureButton setTitle:@"Upload" forState:UIControlStateNormal];
         [self.captureButton setTitleColor:[UIColor cyanColor] forState:UIControlStateNormal];
+        
+        AVCaptureConnection *videoConnection = nil;
+       
+        for (AVCaptureConnection *connection in self.stillImageOutput.connections) {
+            for (AVCaptureInputPort *port in [connection inputPorts]) {
+                if ([[port mediaType] isEqual:AVMediaTypeVideo]) {
+                    videoConnection = connection;
+                    break;
+                }
+            }
+            if (videoConnection) {
+                break;
+            }
+        }
+        
+        [self.stillImageOutput captureStillImageAsynchronouslyFromConnection:videoConnection
+                                                           completionHandler:
+         ^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
+             if (imageDataSampleBuffer != NULL) {
+                 NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
+                              self.image = [UIImage imageWithData:imageData];
+                              self.imageView.image = self.image;
+             }
+         }];
+
     }
 }
+
+- (void)uploadPicture:(UIImage *)image {
+    NSData *data = UIImageJPEGRepresentation(image, 1.0);
+    NSString *fileNameWithExtension = @"New Picture.jpg";
+    NSString *file = [NSTemporaryDirectory() stringByAppendingString:fileNameWithExtension];
+    [data writeToFile:file atomically:YES];
+    
+    NSLog(@"uploading image %@", image);
+    // Upload to Dropbox
+    NSString *destinationDir = @"/";
+    [self.restClient uploadFile:fileNameWithExtension
+                         toPath:destinationDir
+                  withParentRev:nil
+                       fromPath:file];
+    NSLog(@"image uploaded!");
+}
+
+- (void)restClient:(DBRestClient *)client
+      uploadedFile:(NSString *)destPath
+              from:(NSString *)srcPath
+          metadata:(DBMetadata *)metadata
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 @end

@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraViewController">
             <connections>
                 <outlet property="captureButton" destination="vSZ-dV-T7M" id="2ma-d5-hFe"/>
+                <outlet property="imageView" destination="PTq-E6-Xbf" id="moj-gR-4RZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -56,13 +57,26 @@
                         <constraint firstAttribute="bottom" secondItem="vSZ-dV-T7M" secondAttribute="bottom" constant="8" id="swK-BX-PJ0"/>
                     </constraints>
                 </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PTq-E6-Xbf">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="540"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="gZP-9a-X4k" secondAttribute="bottom" id="D3r-Ub-K6I"/>
                 <constraint firstAttribute="trailing" secondItem="gZP-9a-X4k" secondAttribute="trailing" id="PjX-Ay-Zk3"/>
+                <constraint firstItem="PTq-E6-Xbf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RHt-VW-Un8"/>
+                <constraint firstAttribute="trailing" secondItem="PTq-E6-Xbf" secondAttribute="trailing" id="SaP-H2-lUV"/>
+                <constraint firstAttribute="bottom" secondItem="PTq-E6-Xbf" secondAttribute="bottom" constant="60" id="WJM-KE-Nhh"/>
+                <constraint firstItem="gZP-9a-X4k" firstAttribute="top" secondItem="PTq-E6-Xbf" secondAttribute="bottom" constant="-1" id="dhy-jQ-6ED"/>
+                <constraint firstItem="PTq-E6-Xbf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hmC-4y-lEf"/>
                 <constraint firstItem="gZP-9a-X4k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pep-Ei-2pF"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="dhy-jQ-6ED"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>
