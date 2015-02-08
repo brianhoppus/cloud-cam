@@ -9,6 +9,7 @@
 #import "PicCaptureViewController.h"
 #import "SettingsViewController.h"
 #import "SendPicViewController.h"
+#import "CameraViewController.h"
 
 @interface PicCaptureViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -43,10 +44,12 @@
 
 - (IBAction)openCamera:(id)sender {
     // Create and display image picker
-    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
-    imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
-    imagePickerController.delegate = self;
-    [self presentViewController:imagePickerController animated:YES completion:NULL];
+//    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+//    imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+//    imagePickerController.delegate = self;
+//    [self presentViewController:imagePickerController animated:YES completion:NULL];
+    CameraViewController *cameraViewController = [[CameraViewController alloc] init];
+    [self presentViewController:cameraViewController animated:YES completion:NULL];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker

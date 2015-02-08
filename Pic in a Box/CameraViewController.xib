@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraViewController">
+            <connections>
+                <outlet property="captureButton" destination="vSZ-dV-T7M" id="2ma-d5-hFe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZP-9a-X4k">
+                    <rect key="frame" x="0.0" y="539" width="600" height="61"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSZ-dV-T7M">
+                            <rect key="frame" x="459" y="9" width="115" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="4vL-he-6fP"/>
+                                <constraint firstAttribute="width" constant="115" id="Rmp-QN-bCg"/>
+                            </constraints>
+                            <state key="normal" title="Capture">
+                                <color key="titleColor" red="0.14117647058823529" green="1" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="captureImage:" destination="-1" eventType="touchUpInside" id="E2A-Np-zH4"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJz-QG-IC9">
+                            <rect key="frame" x="26" y="9" width="115" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="115" id="Rhm-D0-WIQ"/>
+                                <constraint firstAttribute="height" constant="44" id="UFZ-8q-1lr"/>
+                            </constraints>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelPhotograph:" destination="-1" eventType="touchUpInside" id="Bnk-gQ-DSS"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="vSZ-dV-T7M" secondAttribute="trailing" constant="26" id="09Q-kY-a5r"/>
+                        <constraint firstAttribute="height" constant="61" id="45Y-PB-KJk"/>
+                        <constraint firstItem="DJz-QG-IC9" firstAttribute="leading" secondItem="gZP-9a-X4k" secondAttribute="leading" constant="26" id="AZv-xB-tIs"/>
+                        <constraint firstAttribute="bottom" secondItem="DJz-QG-IC9" secondAttribute="bottom" constant="8" id="UjU-AU-cGu"/>
+                        <constraint firstAttribute="bottom" secondItem="vSZ-dV-T7M" secondAttribute="bottom" constant="8" id="swK-BX-PJ0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gZP-9a-X4k" secondAttribute="bottom" id="D3r-Ub-K6I"/>
+                <constraint firstAttribute="trailing" secondItem="gZP-9a-X4k" secondAttribute="trailing" id="PjX-Ay-Zk3"/>
+                <constraint firstItem="gZP-9a-X4k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pep-Ei-2pF"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
