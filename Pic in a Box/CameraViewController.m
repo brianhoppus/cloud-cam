@@ -66,5 +66,14 @@
 }
 
 - (IBAction)captureImage:(id)sender {
+    // This works the oposite of what you'd think.
+    // The button starts out labeled as "Capture", you take a picture, and then the button is relabled "Upload".
+    // Hitting the button again will upload the image, and dismiss the view controller.
+    if (![self.captureButton.titleLabel.text  isEqual: @"Capture"]) {
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    } else {
+        [self.captureButton setTitle:@"Upload" forState:UIControlStateNormal];
+        [self.captureButton setTitleColor:[UIColor cyanColor] forState:UIControlStateNormal];
+    }
 }
 @end
