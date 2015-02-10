@@ -10,6 +10,8 @@
 
 @interface SettingsViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *dropboxLinkButton;
+
 - (IBAction)closeSettings:(id)sender;
 - (IBAction)connectToDropbox:(id)sender;
 

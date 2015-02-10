@@ -17,7 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    if ([[DBSession sharedSession] isLinked]) {
+        [self.dropboxLinkButton setTitle:@"Unlink Dropbox" forState:UIControlStateNormal];
+    } else {
+        [self.dropboxLinkButton setTitle:@"Link to Dropbox" forState:UIControlStateNormal];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,13 +47,10 @@
 - (IBAction)connectToDropbox:(id)sender {
     if (![[DBSession sharedSession] isLinked]) {
         [[DBSession sharedSession] linkFromController:self];
+        [self.dropboxLinkButton setTitle:@"Unlink Dropbox" forState:UIControlStateNormal];
     } else {
-        UIAlertView *alreadyConnected = [[UIAlertView alloc] initWithTitle:@"Oops!"
-                                                                   message:@"It looks like you're trying to connect to Dropbox"
-                                                                  delegate:self
-                                                         cancelButtonTitle:@"It's already done"
-                                                         otherButtonTitles:nil];
-        [alreadyConnected show];
+        [[DBSession sharedSession] unlinkAll];
+        [self.dropboxLinkButton setTitle:@"Link to Dropbox" forState:UIControlStateNormal];
     }
 }
 @end
