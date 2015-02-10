@@ -123,7 +123,7 @@
     NSData *data = UIImageJPEGRepresentation(image, 1.0);
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"MM-dd-yyyy HH-mm-ss"];
+    [dateFormat setDateFormat:@"MM-dd-yyyy HH.mm.ss"];
     NSString *fileName = [dateFormat stringFromDate:self.dateOfPicture];
     NSString *fileNameWithExtension = [fileName stringByAppendingString:@".jpg"];
     NSString *file = [NSTemporaryDirectory() stringByAppendingString:fileNameWithExtension];
@@ -136,7 +136,6 @@
                          toPath:destinationDir
                   withParentRev:nil
                        fromPath:file];
-    NSLog(@"image uploaded!");
 }
 
 - (void)restClient:(DBRestClient *)client
