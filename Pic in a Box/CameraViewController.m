@@ -20,6 +20,7 @@
 @property (strong, nonatomic) UIImage *image;
 @property (nonatomic) BOOL imageCaptured;
 @property (strong, nonatomic) DBRestClient *restClient;
+@property (strong, nonatomic) NSDate *dateOfPicture;
 
 @end
 
@@ -48,7 +49,7 @@
     
     CALayer *rootLayer = [[self view] layer];
     [rootLayer setMasksToBounds:YES];
-    [self.previewLayer setFrame:CGRectMake(0, 0, rootLayer.bounds.size.width, rootLayer.bounds.size.height)];
+    [self.previewLayer setFrame:CGRectMake(0, 0, 320, 426.6)];
     [rootLayer insertSublayer:self.previewLayer atIndex:0];
     
     self.stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
@@ -114,16 +115,21 @@
              }
          }];
 
+        self.dateOfPicture = [NSDate date];
     }
 }
 
 - (void)uploadPicture:(UIImage *)image {
     NSData *data = UIImageJPEGRepresentation(image, 1.0);
-    NSString *fileNameWithExtension = @"New Picture.jpg";
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MM-dd-yyyy HH-mm-ss"];
+    NSString *fileName = [dateFormat stringFromDate:self.dateOfPicture];
+    NSString *fileNameWithExtension = [fileName stringByAppendingString:@".jpg"];
     NSString *file = [NSTemporaryDirectory() stringByAppendingString:fileNameWithExtension];
+    
     [data writeToFile:file atomically:YES];
     
-    NSLog(@"uploading image %@", image);
     // Upload to Dropbox
     NSString *destinationDir = @"/";
     [self.restClient uploadFile:fileNameWithExtension
