@@ -39,7 +39,11 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0J6-nC-jvS">
-                    <rect key="frame" x="8" y="562" width="35" height="30"/>
+                    <rect key="frame" x="8" y="548" width="60" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Xbe-7G-9PV"/>
+                        <constraint firstAttribute="width" constant="60" id="ucg-7a-MUo"/>
+                    </constraints>
                     <state key="normal" title="Back">
                         <color key="titleColor" red="0.392156899" green="0.91372555489999996" blue="0.66666668650000005" alpha="1" colorSpace="deviceRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
