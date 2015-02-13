@@ -64,8 +64,8 @@
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:NULL];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:NULL];
     
-    [self.syncFolderAlert addAction:ok];
     [self.syncFolderAlert addAction:cancel];
+    [self.syncFolderAlert addAction:ok];
     
     [self.syncFolderAlert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         textField.placeholder = @"/Apps/Pic in a Box/";
