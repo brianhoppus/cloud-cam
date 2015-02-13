@@ -82,6 +82,14 @@
     }
 }
 
+- (IBAction)changePictureResolution:(id)sender {
+    if ([self.resolutionPickerButton.titleLabel.text isEqualToString:@"Enable Hi-Resolution"]) {
+        [self.resolutionPickerButton setTitle:@"Disable Hi-Resolution" forState:UIControlStateNormal];
+    } else {
+        [self.resolutionPickerButton setTitle:@"Enable Hi-Resolution" forState:UIControlStateNormal];
+    }
+}
+
 
 
 @end
