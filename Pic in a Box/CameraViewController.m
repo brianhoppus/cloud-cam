@@ -49,7 +49,7 @@
     
     CALayer *rootLayer = [[self view] layer];
     [rootLayer setMasksToBounds:YES];
-    [self.previewLayer setFrame:CGRectMake(0, 0, 320, 426.6)];
+    [self.previewLayer setFrame:CGRectMake(0, 93, 375, 482)];
     [rootLayer insertSublayer:self.previewLayer atIndex:0];
     
     self.stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
