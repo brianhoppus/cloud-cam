@@ -14,5 +14,6 @@
 
 - (IBAction)closeSettings:(id)sender;
 - (IBAction)connectToDropbox:(id)sender;
+- (IBAction)chooseSyncFolder:(id)sender;
 
 @end

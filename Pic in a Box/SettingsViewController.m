@@ -9,7 +9,9 @@
 #import "SettingsViewController.h"
 #import <DropboxSDK/DropboxSDK.h>
 
-@interface SettingsViewController ()
+@interface SettingsViewController () <UIAlertViewDelegate>
+
+@property (strong, nonatomic) UIAlertController *syncFolderAlert;
 
 @end
 
@@ -53,4 +55,25 @@
         [self.dropboxLinkButton setTitle:@"Link to Dropbox" forState:UIControlStateNormal];
     }
 }
+
+- (IBAction)chooseSyncFolder:(id)sender {
+    self.syncFolderAlert = [UIAlertController alertControllerWithTitle:@"Choose Sync Folder"
+                                                               message:nil
+                                                        preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:NULL];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:NULL];
+    
+    [self.syncFolderAlert addAction:ok];
+    [self.syncFolderAlert addAction:cancel];
+    
+    [self.syncFolderAlert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = @"/Apps/Pic in a Box/";
+    }];
+    
+    [self presentViewController:self.syncFolderAlert animated:YES completion:NULL];
+}
+
+
+
 @end
