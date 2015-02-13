@@ -135,7 +135,7 @@
     [data writeToFile:file atomically:YES];
     
     // Upload to Dropbox
-    NSString *destinationDir = @"/";
+    NSString *destinationDir = @"/Apps/Pic in a Box";
     [self.restClient uploadFile:fileNameWithExtension
                          toPath:destinationDir
                   withParentRev:nil
