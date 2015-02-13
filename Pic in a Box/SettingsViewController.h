@@ -11,9 +11,11 @@
 @interface SettingsViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *dropboxLinkButton;
+@property (weak, nonatomic) IBOutlet UIButton *syncSettingButton;
 
 - (IBAction)closeSettings:(id)sender;
 - (IBAction)connectToDropbox:(id)sender;
 - (IBAction)chooseSyncFolder:(id)sender;
+- (IBAction)changeNetworkSyncSetting:(id)sender;
 
 @end

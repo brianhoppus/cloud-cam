@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController">
             <connections>
                 <outlet property="dropboxLinkButton" destination="EKZ-n9-3fU" id="AiF-Pa-vYd"/>
+                <outlet property="syncSettingButton" destination="HZh-yq-tCT" id="ug8-fe-Is6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -56,14 +57,17 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZh-yq-tCT">
-                    <rect key="frame" x="216" y="246" width="175" height="44"/>
+                    <rect key="frame" x="203" y="246" width="195" height="44"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="175" id="W1w-kL-ulW"/>
+                        <constraint firstAttribute="width" constant="195" id="ZQj-QQ-lls"/>
                     </constraints>
-                    <state key="normal" title="Sync Over WiFi Only">
+                    <state key="normal" title="Sync Over WiFi and Cellular">
                         <color key="titleColor" red="0.3279955231518949" green="0.87410259367239596" blue="0.57420593795121211" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="changeNetworkSyncSetting:" destination="-1" eventType="touchUpInside" id="zYf-mv-fhF"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZV-zW-vDK">
                     <rect key="frame" x="228" y="372" width="145" height="44"/>
@@ -81,15 +85,15 @@
                 <constraint firstAttribute="centerY" secondItem="V9n-ej-jUd" secondAttribute="centerY" constant="-31" id="7YA-6v-Gp2"/>
                 <constraint firstAttribute="centerY" secondItem="XZV-zW-vDK" secondAttribute="centerY" constant="-94" id="EnB-HO-FcB"/>
                 <constraint firstItem="0J6-nC-jvS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="GWY-fW-vLH"/>
-                <constraint firstItem="HZh-yq-tCT" firstAttribute="top" secondItem="EKZ-n9-3fU" secondAttribute="bottom" constant="19" id="Ita-AF-aiF"/>
                 <constraint firstAttribute="centerX" secondItem="XZV-zW-vDK" secondAttribute="centerX" constant="-0.5" id="PqE-mj-mZT"/>
-                <constraint firstItem="HZh-yq-tCT" firstAttribute="centerX" secondItem="V9n-ej-jUd" secondAttribute="centerX" id="Xuq-CB-T21"/>
+                <constraint firstItem="V9n-ej-jUd" firstAttribute="top" secondItem="HZh-yq-tCT" secondAttribute="bottom" constant="19" id="R42-nt-Ine"/>
+                <constraint firstItem="HZh-yq-tCT" firstAttribute="top" secondItem="EKZ-n9-3fU" secondAttribute="bottom" constant="19" id="Wxt-Yh-gaL"/>
+                <constraint firstItem="HZh-yq-tCT" firstAttribute="centerX" secondItem="EKZ-n9-3fU" secondAttribute="centerX" id="Y3e-st-6c9"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="0J6-nC-jvS" secondAttribute="bottom" constant="8" id="b5K-HU-8kx"/>
                 <constraint firstAttribute="centerX" secondItem="V9n-ej-jUd" secondAttribute="centerX" constant="-3" id="bC5-RU-Ypf"/>
                 <constraint firstAttribute="centerY" secondItem="EKZ-n9-3fU" secondAttribute="centerY" constant="95" id="bdc-oL-OQr"/>
                 <constraint firstAttribute="bottom" secondItem="0J6-nC-jvS" secondAttribute="bottom" constant="8" id="fDQ-JU-iFR"/>
                 <constraint firstAttribute="centerX" secondItem="EKZ-n9-3fU" secondAttribute="centerX" id="ln2-xR-4Qm"/>
-                <constraint firstItem="V9n-ej-jUd" firstAttribute="top" secondItem="HZh-yq-tCT" secondAttribute="bottom" constant="19" id="pdA-GN-l5P"/>
                 <constraint firstItem="0J6-nC-jvS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="qxX-lj-mG1"/>
             </constraints>
         </view>

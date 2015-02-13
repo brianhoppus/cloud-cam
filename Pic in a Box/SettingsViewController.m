@@ -74,6 +74,14 @@
     [self presentViewController:self.syncFolderAlert animated:YES completion:NULL];
 }
 
+- (IBAction)changeNetworkSyncSetting:(id)sender {
+    if ([self.syncSettingButton.titleLabel.text isEqualToString:@"Sync Over WiFi Only"]) {
+        [self.syncSettingButton setTitle:@"Sync Over WiFi and Cellular" forState:UIControlStateNormal];
+    } else {
+        [self.syncSettingButton setTitle:@"Sync Over WiFi Only" forState:UIControlStateNormal];
+    }
+}
+
 
 
 @end
