@@ -32,15 +32,27 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewWillAppear:(BOOL)animated {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"networkSyncSetting"]) {
+        NSString *networkSyncSetting = [userDefaults stringForKey:@"networkSyncSetting"];
+        [self.syncSettingButton setTitle:networkSyncSetting forState:UIControlStateNormal];
+    }
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"resolutionSetting"]) {
+        NSString *resoutionSetting = [userDefaults stringForKey:@"resolutionSetting"];
+        [self.resolutionPickerButton setTitle:resoutionSetting forState:UIControlStateNormal];
+    }
 }
-*/
+
+- (void)viewWillDisappear:(BOOL)animated {
+    NSString *networkSyncSetting = self.syncSettingButton.titleLabel.text;
+    [[NSUserDefaults standardUserDefaults] setObject:networkSyncSetting forKey:@"networkSyncSetting"];
+    
+    NSString *resolutionSetting = self.resolutionPickerButton.titleLabel.text;
+    [[NSUserDefaults standardUserDefaults] setObject:resolutionSetting forKey:@"resolutionSetting"];
+}
 
 - (IBAction)closeSettings:(id)sender {
     [self dismissViewControllerAnimated:YES completion:NULL];
