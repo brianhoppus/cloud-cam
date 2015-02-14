@@ -53,6 +53,16 @@
     [rootLayer insertSublayer:self.previewLayer atIndex:0];
     
     self.stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *resolutionSetting = [userDefaults stringForKey:@"resolutionSetting"];
+    if ([resolutionSetting isEqualToString:@"Disable Hi-Resolution"]) {
+        self.stillImageOutput.highResolutionStillImageOutputEnabled = YES;
+    } else {
+        self.stillImageOutput.highResolutionStillImageOutputEnabled = NO;
+    }
+
+    
     NSDictionary *outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys:AVVideoCodecJPEG, AVVideoCodecKey, nil];
     [self.stillImageOutput setOutputSettings:outputSettings];
     
