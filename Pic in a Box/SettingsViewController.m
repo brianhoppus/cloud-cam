@@ -42,8 +42,8 @@
     }
     
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"resolutionSetting"]) {
-        NSString *resoutionSetting = [userDefaults stringForKey:@"resolutionSetting"];
-        [self.resolutionPickerButton setTitle:resoutionSetting forState:UIControlStateNormal];
+        NSString *resolutionSetting = [userDefaults stringForKey:@"resolutionSetting"];
+        [self.resolutionPickerButton setTitle:resolutionSetting forState:UIControlStateNormal];
     }
 }
 
@@ -78,7 +78,6 @@
                                                  style:UIAlertActionStyleDefault
                                                handler:^(UIAlertAction *action) {
                                                    UITextField *textField = self.syncFolderAlert.textFields[0];
-                                                   NSLog(@"The user entered: %@", textField.text);
                                                    NSString *newSyncFolder = textField.text;
                                                    [[NSUserDefaults standardUserDefaults] setObject:newSyncFolder forKey:@"syncFolder"];
                                                }];
