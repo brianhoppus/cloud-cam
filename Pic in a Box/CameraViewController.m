@@ -26,6 +26,8 @@
 
 @implementation CameraViewController
 
+#pragma mark  Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -76,6 +78,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark -IBActions
+
 - (IBAction)cancelPhotograph:(id)sender {
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
@@ -117,6 +121,8 @@
         self.dateOfPicture = [NSDate date];
     }
 }
+
+#pragma mark - Private
 
 - (void)uploadPicture:(UIImage *)image {
     NSData *data = UIImageJPEGRepresentation(image, 1.0);
