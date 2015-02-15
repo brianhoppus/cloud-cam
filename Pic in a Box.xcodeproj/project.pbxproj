@@ -20,8 +20,6 @@
 		D3E6289D1A7C56B3002B35B7 /* PicCaptureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E6289B1A7C56B3002B35B7 /* PicCaptureViewController.xib */; };
 		D3E628A31A7D4E6A002B35B7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E628A11A7D4E6A002B35B7 /* SettingsViewController.m */; };
 		D3E628A41A7D4E6A002B35B7 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E628A21A7D4E6A002B35B7 /* SettingsViewController.xib */; };
-		D3E628A81A7D68CA002B35B7 /* SendPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E628A61A7D68CA002B35B7 /* SendPicViewController.m */; };
-		D3E628A91A7D68CA002B35B7 /* SendPicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E628A71A7D68CA002B35B7 /* SendPicViewController.xib */; };
 		D3E62CB61A86E551002B35B7 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E62CB41A86E551002B35B7 /* CameraViewController.m */; };
 		D3E62CB71A86E551002B35B7 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E62CB51A86E551002B35B7 /* CameraViewController.xib */; };
 		D3E62CB91A86E75C002B35B7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E62CB81A86E75B002B35B7 /* AVFoundation.framework */; };
@@ -58,9 +56,6 @@
 		D3E628A01A7D4E6A002B35B7 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		D3E628A11A7D4E6A002B35B7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		D3E628A21A7D4E6A002B35B7 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
-		D3E628A51A7D68CA002B35B7 /* SendPicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendPicViewController.h; sourceTree = "<group>"; };
-		D3E628A61A7D68CA002B35B7 /* SendPicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendPicViewController.m; sourceTree = "<group>"; };
-		D3E628A71A7D68CA002B35B7 /* SendPicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendPicViewController.xib; sourceTree = "<group>"; };
 		D3E62CB31A86E551002B35B7 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		D3E62CB41A86E551002B35B7 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		D3E62CB51A86E551002B35B7 /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
@@ -166,7 +161,6 @@
 			children = (
 				D3E6289B1A7C56B3002B35B7 /* PicCaptureViewController.xib */,
 				D3E628A21A7D4E6A002B35B7 /* SettingsViewController.xib */,
-				D3E628A71A7D68CA002B35B7 /* SendPicViewController.xib */,
 				D3E62CB51A86E551002B35B7 /* CameraViewController.xib */,
 			);
 			name = Views;
@@ -179,8 +173,6 @@
 				D3E6289A1A7C56B3002B35B7 /* PicCaptureViewController.m */,
 				D3E628A01A7D4E6A002B35B7 /* SettingsViewController.h */,
 				D3E628A11A7D4E6A002B35B7 /* SettingsViewController.m */,
-				D3E628A51A7D68CA002B35B7 /* SendPicViewController.h */,
-				D3E628A61A7D68CA002B35B7 /* SendPicViewController.m */,
 				D3E62CB31A86E551002B35B7 /* CameraViewController.h */,
 				D3E62CB41A86E551002B35B7 /* CameraViewController.m */,
 			);
@@ -278,7 +270,6 @@
 				D3E4E0921A7BE77400BAAEEB /* Images.xcassets in Resources */,
 				D3E62CB71A86E551002B35B7 /* CameraViewController.xib in Resources */,
 				D3E628A41A7D4E6A002B35B7 /* SettingsViewController.xib in Resources */,
-				D3E628A91A7D68CA002B35B7 /* SendPicViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +288,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3E6289C1A7C56B3002B35B7 /* PicCaptureViewController.m in Sources */,
-				D3E628A81A7D68CA002B35B7 /* SendPicViewController.m in Sources */,
 				D3E4E08A1A7BE77300BAAEEB /* AppDelegate.m in Sources */,
 				D3E62CB61A86E551002B35B7 /* CameraViewController.m in Sources */,
 				D3E4E0871A7BE77300BAAEEB /* main.m in Sources */,

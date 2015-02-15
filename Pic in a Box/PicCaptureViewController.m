@@ -8,7 +8,6 @@
 
 #import "PicCaptureViewController.h"
 #import "SettingsViewController.h"
-#import "SendPicViewController.h"
 #import "CameraViewController.h"
 
 @interface PicCaptureViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -50,19 +49,6 @@
 //    [self presentViewController:imagePickerController animated:YES completion:NULL];
     CameraViewController *cameraViewController = [[CameraViewController alloc] init];
     [self presentViewController:cameraViewController animated:YES completion:NULL];
-}
-
-- (void)imagePickerController:(UIImagePickerController *)picker
-didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
-    [self dismissViewControllerAnimated:YES completion:NULL];
-    
-    //create and display upload view
-    self.image = info[UIImagePickerControllerOriginalImage];
-    SendPicViewController *sendPicController = [[SendPicViewController alloc] initWithImage:self.image];
-    sendPicController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    
-    [self presentViewController:sendPicController animated:YES completion:NULL];
 }
 
 - (IBAction)openSetttings:(id)sender {
