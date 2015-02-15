@@ -88,7 +88,6 @@
 		D3E4E0781A7BE77300BAAEEB = {
 			isa = PBXGroup;
 			children = (
-				D34A05A71A900F4000D2581A /* StoreKit.framework */,
 				D3E4E0AE1A7BE82400BAAEEB /* Frameworks and SDK's */,
 				D3E4E0831A7BE77300BAAEEB /* Pic in a Box */,
 				D3E4E09D1A7BE77400BAAEEB /* Pic in a BoxTests */,
@@ -148,6 +147,7 @@
 		D3E4E0AE1A7BE82400BAAEEB /* Frameworks and SDK's */ = {
 			isa = PBXGroup;
 			children = (
+				D34A05A71A900F4000D2581A /* StoreKit.framework */,
 				D3E62CB81A86E75B002B35B7 /* AVFoundation.framework */,
 				D3E4E0AF1A7BE88300BAAEEB /* DropboxSDK.framework */,
 				D3E4E0AC1A7BE82000BAAEEB /* QuartzCore.framework */,
