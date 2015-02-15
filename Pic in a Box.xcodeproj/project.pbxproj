@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D34A05A81A900F4000D2581A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34A05A71A900F4000D2581A /* StoreKit.framework */; };
 		D34A05AA1A9108B800D2581A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D34A05A91A9108B800D2581A /* LaunchScreen.xib */; };
+		D34A05AD1A910A8700D2581A /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A05AC1A910A8700D2581A /* Settings.m */; };
 		D3E4E0871A7BE77300BAAEEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E4E0861A7BE77300BAAEEB /* main.m */; };
 		D3E4E08A1A7BE77300BAAEEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E4E0891A7BE77300BAAEEB /* AppDelegate.m */; };
 		D3E4E0921A7BE77400BAAEEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3E4E0911A7BE77400BAAEEB /* Images.xcassets */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		D34A05A71A900F4000D2581A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D34A05A91A9108B800D2581A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		D34A05AB1A910A8700D2581A /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		D34A05AC1A910A8700D2581A /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		D3E4E0811A7BE77300BAAEEB /* Pic in a Box.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pic in a Box.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E4E0851A7BE77300BAAEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3E4E0861A7BE77300BAAEEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D34A05AE1A910A9000D2581A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D34A05AB1A910A8700D2581A /* Settings.h */,
+				D34A05AC1A910A8700D2581A /* Settings.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		D3E4E0781A7BE77300BAAEEB = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +123,7 @@
 			children = (
 				D3E4E0881A7BE77300BAAEEB /* AppDelegate.h */,
 				D3E4E0891A7BE77300BAAEEB /* AppDelegate.m */,
+				D34A05AE1A910A9000D2581A /* Model */,
 				D3E6289F1A7C56C6002B35B7 /* Controllers */,
 				D3E6289E1A7C56BC002B35B7 /* Views */,
 				D3E4E0911A7BE77400BAAEEB /* Images.xcassets */,
@@ -293,6 +306,7 @@
 			files = (
 				D3E6289C1A7C56B3002B35B7 /* PicCaptureViewController.m in Sources */,
 				D3E4E08A1A7BE77300BAAEEB /* AppDelegate.m in Sources */,
+				D34A05AD1A910A8700D2581A /* Settings.m in Sources */,
 				D3E62CB61A86E551002B35B7 /* CameraViewController.m in Sources */,
 				D3E4E0871A7BE77300BAAEEB /* main.m in Sources */,
 				D3E628A31A7D4E6A002B35B7 /* SettingsViewController.m in Sources */,
