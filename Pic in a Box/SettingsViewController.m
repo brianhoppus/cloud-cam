@@ -12,6 +12,7 @@
 @interface SettingsViewController () <UIAlertViewDelegate>
 
 @property (strong, nonatomic) UIAlertController *syncFolderAlert;
+@property (strong, nonatomic) NSString *uploadPath;
 
 @end
 
@@ -73,14 +74,28 @@
                                                                message:nil
                                                         preferredStyle:UIAlertControllerStyleAlert];
 
-    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:NULL];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK"
+                                                 style:UIAlertActionStyleDefault
+                                               handler:^(UIAlertAction *action) {
+                                                   UITextField *textField = self.syncFolderAlert.textFields[0];
+                                                   NSLog(@"The user entered: %@", textField.text);
+                                                   NSString *newSyncFolder = textField.text;
+                                                   [[NSUserDefaults standardUserDefaults] setObject:newSyncFolder forKey:@"syncFolder"];
+                                               }];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:NULL];
     
     [self.syncFolderAlert addAction:cancel];
     [self.syncFolderAlert addAction:ok];
     
     [self.syncFolderAlert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-        textField.placeholder = @"/Apps/Pic in a Box/";
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"syncFolder"]) {
+            NSString *syncFolder = [userDefaults stringForKey:@"syncFolder"];
+            textField.placeholder = syncFolder;
+        } else {
+            textField.placeholder = @"/Apps/Pic in a Box/";
+        }
     }];
     
     [self presentViewController:self.syncFolderAlert animated:YES completion:NULL];
