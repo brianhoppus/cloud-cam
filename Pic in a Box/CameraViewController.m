@@ -145,11 +145,21 @@
     [data writeToFile:file atomically:YES];
     
     // Upload to Dropbox
-    NSString *destinationDir = @"/Apps/Pic in a Box";
-    [self.restClient uploadFile:fileNameWithExtension
-                         toPath:destinationDir
-                  withParentRev:nil
-                       fromPath:file];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"syncFolder"]) {
+        NSString *destinationDir = [userDefaults stringForKey:@"syncFolder"];
+        
+        [self.restClient uploadFile:fileNameWithExtension
+                             toPath:destinationDir
+                      withParentRev:nil
+                           fromPath:file];
+    } else {
+        NSString *destinationDir = @"/Apps/Pic in a Box";
+        [self.restClient uploadFile:fileNameWithExtension
+                             toPath:destinationDir
+                      withParentRev:nil
+                           fromPath:file];
+    }
 }
 
 - (void)restClient:(DBRestClient *)client
