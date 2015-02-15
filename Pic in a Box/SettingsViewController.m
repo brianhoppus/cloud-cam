@@ -20,12 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    if ([[DBSession sharedSession] isLinked]) {
-//        [self.dropboxLinkButton setTitle:@"Unlink Dropbox" forState:UIControlStateNormal];
-//    } else {
-//        [self.dropboxLinkButton setTitle:@"Link to Dropbox" forState:UIControlStateNormal];
-//    }
 }
 
 - (void)didReceiveMemoryWarning {
