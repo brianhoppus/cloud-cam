@@ -76,16 +76,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)cancelPhotograph:(id)sender {
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
@@ -95,7 +85,6 @@
     // The button starts out labeled as "Capture", you take a picture, and then the button is relabled "Upload".
     // Hitting the button again will upload the image, and dismiss the view controller.
     if (![self.captureButton.titleLabel.text  isEqual: @"Capture"]) {
-//        [self dismissViewControllerAnimated:YES completion:NULL];
         [self uploadPicture:self.image];
     } else {
         [self.captureButton setTitle:@"Upload" forState:UIControlStateNormal];
