@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D34A05A81A900F4000D2581A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34A05A71A900F4000D2581A /* StoreKit.framework */; };
+		D34A05AA1A9108B800D2581A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D34A05A91A9108B800D2581A /* LaunchScreen.xib */; };
 		D3E4E0871A7BE77300BAAEEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E4E0861A7BE77300BAAEEB /* main.m */; };
 		D3E4E08A1A7BE77300BAAEEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E4E0891A7BE77300BAAEEB /* AppDelegate.m */; };
 		D3E4E0921A7BE77400BAAEEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3E4E0911A7BE77400BAAEEB /* Images.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		D34A05A71A900F4000D2581A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		D34A05A91A9108B800D2581A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		D3E4E0811A7BE77300BAAEEB /* Pic in a Box.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pic in a Box.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E4E0851A7BE77300BAAEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3E4E0861A7BE77300BAAEEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				D3E6289B1A7C56B3002B35B7 /* PicCaptureViewController.xib */,
+				D34A05A91A9108B800D2581A /* LaunchScreen.xib */,
 				D3E628A21A7D4E6A002B35B7 /* SettingsViewController.xib */,
 				D3E62CB51A86E551002B35B7 /* CameraViewController.xib */,
 			);
@@ -269,6 +272,7 @@
 				D3E4E0B21A7C417700BAAEEB /* configuration.plist in Resources */,
 				D3E4E0921A7BE77400BAAEEB /* Images.xcassets in Resources */,
 				D3E62CB71A86E551002B35B7 /* CameraViewController.xib in Resources */,
+				D34A05AA1A9108B800D2581A /* LaunchScreen.xib in Resources */,
 				D3E628A41A7D4E6A002B35B7 /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
