@@ -21,11 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if ([[DBSession sharedSession] isLinked]) {
-        [self.dropboxLinkButton setTitle:@"Unlink Dropbox" forState:UIControlStateNormal];
-    } else {
-        [self.dropboxLinkButton setTitle:@"Link to Dropbox" forState:UIControlStateNormal];
-    }
+//    if ([[DBSession sharedSession] isLinked]) {
+//        [self.dropboxLinkButton setTitle:@"Unlink Dropbox" forState:UIControlStateNormal];
+//    } else {
+//        [self.dropboxLinkButton setTitle:@"Link to Dropbox" forState:UIControlStateNormal];
+//    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,8 +34,17 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [self setAccountStatusForButton:self.dropboxLinkButton];
     [self loadUserDefaultSetting:@"networkSyncSetting" forButton:self.syncSettingButton];
     [self loadUserDefaultSetting:@"resolutionSetting" forButton:self.resolutionPickerButton];
+}
+
+- (void)setAccountStatusForButton:(UIButton *)button {
+    if ([[DBSession sharedSession] isLinked]) {
+        [button setTitle:@"Unlink Dropbox" forState:UIControlStateNormal];
+    } else {
+        [button setTitle:@"Connect to Dropbox" forState:UIControlStateNormal];
+    }
 }
 
 - (void)loadUserDefaultSetting:(NSString *)setting forButton:(UIButton *)button {
@@ -65,7 +74,7 @@
         [self.dropboxLinkButton setTitle:@"Unlink Dropbox" forState:UIControlStateNormal];
     } else {
         [[DBSession sharedSession] unlinkAll];
-        [self.dropboxLinkButton setTitle:@"Link to Dropbox" forState:UIControlStateNormal];
+        [self.dropboxLinkButton setTitle:@"Connect to Dropbox" forState:UIControlStateNormal];
     }
 }
 
