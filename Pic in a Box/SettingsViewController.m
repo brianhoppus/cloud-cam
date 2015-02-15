@@ -65,7 +65,7 @@
                                                  style:UIAlertActionStyleDefault
                                                handler:^(UIAlertAction *action) {
                                                    UITextField *textField = self.syncFolderAlert.textFields[0];
-                                                   NSString *newSyncFolder = textField.text;
+                                                   NSString *newSyncFolder = [self formatUploadPath:textField.text];
                                                    [[NSUserDefaults standardUserDefaults] setObject:newSyncFolder forKey:@"syncFolder"];
                                                }];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:NULL];
@@ -125,6 +125,14 @@
 - (void)saveSettingForButton:(UIButton *)button withKey:(NSString *)key {
     NSString *buttonValue = button.titleLabel.text;
     [[NSUserDefaults standardUserDefaults] setObject:buttonValue forKey:key];
+}
+
+- (NSString *)formatUploadPath:(NSString *)uploadPath {
+    if (![uploadPath hasPrefix:@"/"]) {
+        NSString *formattedPath = @"/";
+        uploadPath = [formattedPath stringByAppendingString:uploadPath];
+    }
+    return uploadPath;
 }
 
 @end
