@@ -10,7 +10,7 @@
 #import "SettingsViewController.h"
 #import "CameraViewController.h"
 
-@interface PicCaptureViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface PicCaptureViewController ()
 
 @property (strong, nonatomic) UIImage *image;
 
@@ -31,29 +31,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)openCamera:(id)sender {
-    // Create and display image picker
-//    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
-//    imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
-//    imagePickerController.delegate = self;
-//    [self presentViewController:imagePickerController animated:YES completion:NULL];
     CameraViewController *cameraViewController = [[CameraViewController alloc] init];
     [self presentViewController:cameraViewController animated:YES completion:NULL];
 }
 
 - (IBAction)openSetttings:(id)sender {
     SettingsViewController *settingsViewController = [[SettingsViewController alloc] init];
-//    settingsViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     settingsViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:settingsViewController animated:YES completion:NULL];
 }
