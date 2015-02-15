@@ -51,11 +51,13 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    NSString *networkSyncSetting = self.syncSettingButton.titleLabel.text;
-    [[NSUserDefaults standardUserDefaults] setObject:networkSyncSetting forKey:@"networkSyncSetting"];
-    
-    NSString *resolutionSetting = self.resolutionPickerButton.titleLabel.text;
-    [[NSUserDefaults standardUserDefaults] setObject:resolutionSetting forKey:@"resolutionSetting"];
+    [self saveSettingForButton:self.syncSettingButton withKey:@"networkSyncSetting"];
+    [self saveSettingForButton:self.resolutionPickerButton withKey:@"resolutionSetting"];
+}
+
+- (void)saveSettingForButton:(UIButton *)button withKey:(NSString *)key {
+    NSString *buttonValue = button.titleLabel.text;
+    [[NSUserDefaults standardUserDefaults] setObject:buttonValue forKey:key];
 }
 
 - (IBAction)closeSettings:(id)sender {
