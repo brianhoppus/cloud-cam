@@ -34,16 +34,16 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [self loadUserDefaultSetting:@"networkSyncSetting" forButton:self.syncSettingButton];
+    [self loadUserDefaultSetting:@"resolutionSetting" forButton:self.resolutionPickerButton];
+}
+
+- (void)loadUserDefaultSetting:(NSString *)setting forButton:(UIButton *)button {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"networkSyncSetting"]) {
-        NSString *networkSyncSetting = [userDefaults stringForKey:@"networkSyncSetting"];
-        [self.syncSettingButton setTitle:networkSyncSetting forState:UIControlStateNormal];
-    }
-    
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"resolutionSetting"]) {
-        NSString *resolutionSetting = [userDefaults stringForKey:@"resolutionSetting"];
-        [self.resolutionPickerButton setTitle:resolutionSetting forState:UIControlStateNormal];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:setting]) {
+        NSString *storedSetting = [userDefaults stringForKey:setting];
+        [button setTitle:storedSetting forState:UIControlStateNormal];
     }
 }
 
