@@ -18,6 +18,8 @@
 
 @implementation SettingsViewController
 
+#pragma mark  Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
@@ -33,32 +35,12 @@
     [self loadUserDefaultSetting:@"resolutionSetting" forButton:self.resolutionPickerButton];
 }
 
-- (void)setAccountStatusForButton:(UIButton *)button {
-    if ([[DBSession sharedSession] isLinked]) {
-        [button setTitle:@"Unlink Dropbox" forState:UIControlStateNormal];
-    } else {
-        [button setTitle:@"Connect to Dropbox" forState:UIControlStateNormal];
-    }
-}
-
-- (void)loadUserDefaultSetting:(NSString *)setting forButton:(UIButton *)button {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:setting]) {
-        NSString *storedSetting = [userDefaults stringForKey:setting];
-        [button setTitle:storedSetting forState:UIControlStateNormal];
-    }
-}
-
 - (void)viewWillDisappear:(BOOL)animated {
     [self saveSettingForButton:self.syncSettingButton withKey:@"networkSyncSetting"];
     [self saveSettingForButton:self.resolutionPickerButton withKey:@"resolutionSetting"];
 }
 
-- (void)saveSettingForButton:(UIButton *)button withKey:(NSString *)key {
-    NSString *buttonValue = button.titleLabel.text;
-    [[NSUserDefaults standardUserDefaults] setObject:buttonValue forKey:key];
-}
+#pragma mark - IBActions
 
 - (IBAction)closeSettings:(id)sender {
     [self dismissViewControllerAnimated:YES completion:NULL];
@@ -121,6 +103,28 @@
     }
 }
 
+#pragma mark - Private
 
+- (void)setAccountStatusForButton:(UIButton *)button {
+    if ([[DBSession sharedSession] isLinked]) {
+        [button setTitle:@"Unlink Dropbox" forState:UIControlStateNormal];
+    } else {
+        [button setTitle:@"Connect to Dropbox" forState:UIControlStateNormal];
+    }
+}
+
+- (void)loadUserDefaultSetting:(NSString *)setting forButton:(UIButton *)button {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:setting]) {
+        NSString *storedSetting = [userDefaults stringForKey:setting];
+        [button setTitle:storedSetting forState:UIControlStateNormal];
+    }
+}
+
+- (void)saveSettingForButton:(UIButton *)button withKey:(NSString *)key {
+    NSString *buttonValue = button.titleLabel.text;
+    [[NSUserDefaults standardUserDefaults] setObject:buttonValue forKey:key];
+}
 
 @end
