@@ -67,6 +67,12 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
+#pragma mark - Dropbox API's
+
+- (void)restClient:(DBRestClient *)client uploadFileFailedWithError:(NSError *)error {
+    [self displayUploadError];
+}
+
 #pragma mark - Private
 
 - (void)uploadPicture:(UIImage *)image {
@@ -109,6 +115,21 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
                       withParentRev:nil
                            fromPath:file];
     }
+}
+
+- (void)displayUploadError {
+    UIAlertController *uploadErrorAlert = [UIAlertController alertControllerWithTitle:@"Uh-oh!"
+                                                                              message:@"Something went wrong trying to upload the last picture."
+                                                                       preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *retry = [UIAlertAction actionWithTitle:@"Retry" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self uploadPicture:self.image];
+    }];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:NULL];
+    [uploadErrorAlert addAction:retry];
+    [uploadErrorAlert addAction:cancel];
+    [self presentViewController:uploadErrorAlert animated:YES completion:NULL];
 }
 
 @end
