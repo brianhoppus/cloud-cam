@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <DropboxSDK/DropboxSDK.h>
 
-@interface PicCaptureViewController : UIViewController
+@interface PicCaptureViewController : UIViewController <UIImagePickerControllerDelegate,
+                                                        UINavigationControllerDelegate,
+                                                        DBRestClientDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *cameraButton;
 

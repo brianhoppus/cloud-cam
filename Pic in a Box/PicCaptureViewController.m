@@ -13,14 +13,21 @@
 @interface PicCaptureViewController ()
 
 @property (strong, nonatomic) UIImage *image;
+@property (strong, nonatomic) DBRestClient *restClient;
+@property (strong, nonatomic) NSDate *dateOfPicture;
 
 @end
 
 @implementation PicCaptureViewController
 
+# pragma mark - Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
+    self.restClient.delegate = self;
+    
     self.cameraButton.layer.cornerRadius = 4;
     self.cameraButton.layer.borderWidth = 1;
     self.cameraButton.layer.borderColor = (__bridge CGColorRef)(self.cameraButton.backgroundColor);
@@ -31,9 +38,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+# pragma mark - IBActions
+
 - (IBAction)openCamera:(id)sender {
-    CameraViewController *cameraViewController = [[CameraViewController alloc] init];
-    [self presentViewController:cameraViewController animated:YES completion:NULL];
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePickerController.delegate = self;
+    [self presentViewController:imagePickerController animated:YES completion:NULL];
 }
 
 - (IBAction)openSetttings:(id)sender {
@@ -42,9 +53,54 @@
     [self presentViewController:settingsViewController animated:YES completion:NULL];
 }
 
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
-{
+# pragma mark - UIIMagePickerController
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    self.image = info[UIImagePickerControllerOriginalImage];
+    self.dateOfPicture = [NSDate date];
+    [self uploadPicture:self.image];
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+#pragma mark - Private
+
+- (void)uploadPicture:(UIImage *)image {
+    NSData *data = UIImageJPEGRepresentation(image, 1.0);
+    
+    if (![[DBSession sharedSession] isLinked]) {
+        [[DBSession sharedSession] linkFromController:self];
+    }
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MM-dd-yyyy HH.mm.ss"];
+    NSString *fileName = [dateFormat stringFromDate:self.dateOfPicture];
+    NSString *fileNameWithExtension = [fileName stringByAppendingString:@".jpg"];
+    NSString *file = [NSTemporaryDirectory() stringByAppendingString:fileNameWithExtension];
+    
+    [data writeToFile:file atomically:YES];
+    
+    // Upload to Dropbox
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"syncFolder"]) {
+        NSString *destinationDir = [userDefaults stringForKey:@"syncFolder"];
+        
+        [self.restClient uploadFile:fileNameWithExtension
+                             toPath:destinationDir
+                      withParentRev:nil
+                           fromPath:file];
+    } else {
+        NSString *destinationDir = @"/Apps/Pic in a Box";
+        [self.restClient uploadFile:fileNameWithExtension
+                             toPath:destinationDir
+                      withParentRev:nil
+                           fromPath:file];
+    }
 }
 
 @end
