@@ -8,7 +8,6 @@
 
 #import "PicCaptureViewController.h"
 #import "SettingsViewController.h"
-#import "CameraViewController.h"
 
 @interface PicCaptureViewController ()
 
