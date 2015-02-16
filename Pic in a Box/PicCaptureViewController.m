@@ -71,7 +71,17 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
 #pragma mark - Private
 
 - (void)uploadPicture:(UIImage *)image {
-    NSData *data = UIImageJPEGRepresentation(image, 1.0);
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    NSData *data = [[NSData alloc] init];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"resolutionSetting"]) {
+        if ([[userDefaults stringForKey:@"resolutionSetting"] isEqualToString:@"Enable Hi-Resolution"]) {
+            data = UIImageJPEGRepresentation(image, 0.66);
+        } else {
+            data = UIImageJPEGRepresentation(image, 1.0);
+        }
+    }
+
     
     if (![[DBSession sharedSession] isLinked]) {
         [[DBSession sharedSession] linkFromController:self];
@@ -86,7 +96,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [data writeToFile:file atomically:YES];
     
     // Upload to Dropbox
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"syncFolder"]) {
         NSString *destinationDir = [userDefaults stringForKey:@"syncFolder"];
         
