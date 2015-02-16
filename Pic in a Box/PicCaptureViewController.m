@@ -127,8 +127,8 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     }];
     
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:NULL];
-    [uploadErrorAlert addAction:retry];
     [uploadErrorAlert addAction:cancel];
+    [uploadErrorAlert addAction:retry];
     [self presentViewController:uploadErrorAlert animated:YES completion:NULL];
 }
 
