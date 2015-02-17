@@ -122,7 +122,9 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
                                                                               message:@"Something went wrong trying to upload the last picture."
                                                                        preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *retry = [UIAlertAction actionWithTitle:@"Retry" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    UIAlertAction *retry = [UIAlertAction actionWithTitle:@"Retry"
+                                                    style:UIAlertActionStyleDefault
+                                                  handler:^(UIAlertAction *action) {
         [self uploadPicture:self.image];
     }];
     
