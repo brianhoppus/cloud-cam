@@ -86,11 +86,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
             data = UIImageJPEGRepresentation(image, 1.0);
         }
     }
-
-    
-    if (![[DBSession sharedSession] isLinked]) {
-        [[DBSession sharedSession] linkFromController:self];
-    }
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"MM-dd-yyyy HH.mm.ss"];
