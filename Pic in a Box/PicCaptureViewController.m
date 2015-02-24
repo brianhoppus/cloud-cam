@@ -104,7 +104,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
                       withParentRev:nil
                            fromPath:file];
     } else {
-        NSString *destinationDir = @"/Apps/Pic in a Box";
+        NSString *destinationDir = @"/CloudCam";
         [self.restClient uploadFile:fileNameWithExtension
                              toPath:destinationDir
                       withParentRev:nil

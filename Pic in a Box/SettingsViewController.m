@@ -80,7 +80,7 @@
             NSString *syncFolder = [userDefaults stringForKey:@"syncFolder"];
             textField.placeholder = syncFolder;
         } else {
-            textField.placeholder = @"/Apps/Pic in a Box/";
+            textField.placeholder = @"/CloudCam";
         }
     }];
     
