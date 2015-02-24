@@ -36,7 +36,7 @@
                         <constraint firstAttribute="height" constant="44" id="Unp-qj-fe5"/>
                         <constraint firstAttribute="width" constant="159" id="bg6-4Y-npy"/>
                     </constraints>
-                    <state key="normal" title="Camera">
+                    <state key="normal" title="Take a Picture!">
                         <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
