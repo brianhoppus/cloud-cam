@@ -23,7 +23,7 @@
                         <constraint firstAttribute="height" constant="44" id="6hg-VV-Nvd"/>
                     </constraints>
                     <state key="normal" title="Connect to Dropbox">
-                        <color key="titleColor" red="0.3279955231518949" green="0.87410259367239596" blue="0.57420593795121211" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -36,7 +36,7 @@
                         <constraint firstAttribute="height" constant="44" id="899-Vy-hbn"/>
                     </constraints>
                     <state key="normal" title="Choose Sync Folder">
-                        <color key="titleColor" red="0.3279955231518949" green="0.87410259367239596" blue="0.57420593795121211" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -50,7 +50,7 @@
                         <constraint firstAttribute="width" constant="60" id="ucg-7a-MUo"/>
                     </constraints>
                     <state key="normal" title="Back">
-                        <color key="titleColor" red="0.392156899" green="0.91372555489999996" blue="0.66666668650000005" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -63,7 +63,7 @@
                         <constraint firstAttribute="width" constant="195" id="ZQj-QQ-lls"/>
                     </constraints>
                     <state key="normal" title="Sync Over WiFi and Cellular">
-                        <color key="titleColor" red="0.3279955231518949" green="0.87410259367239596" blue="0.57420593795121211" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -76,7 +76,7 @@
                         <constraint firstAttribute="height" constant="44" id="2i1-4O-jIH"/>
                     </constraints>
                     <state key="normal" title="Enable Hi-Resolution">
-                        <color key="titleColor" red="0.3279955231518949" green="0.87410259367239596" blue="0.57420593795121211" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -84,7 +84,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.80183528653028469" green="0.92684659090909094" blue="0.86380664631462123" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.73510411920636765" green="1" blue="0.94562106876070429" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="centerY" secondItem="V9n-ej-jUd" secondAttribute="centerY" constant="-31" id="7YA-6v-Gp2"/>
                 <constraint firstAttribute="centerY" secondItem="XZV-zW-vDK" secondAttribute="centerY" constant="-94" id="EnB-HO-FcB"/>

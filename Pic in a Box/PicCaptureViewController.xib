@@ -37,14 +37,14 @@
                         <constraint firstAttribute="width" constant="159" id="bg6-4Y-npy"/>
                     </constraints>
                     <state key="normal" title="Camera">
-                        <color key="titleColor" red="0.392156899" green="0.91372555489999996" blue="0.66666668650000005" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="openCamera:" destination="-1" eventType="touchUpInside" id="FSH-mg-JeX"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.392156899" green="0.91372555489999996" blue="0.66666668650000005" alpha="1" colorSpace="deviceRGB"/>
+            <color key="backgroundColor" red="0.30980392156862746" green="0.84705882352941175" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="ygA-eG-han" secondAttribute="bottom" constant="8" id="1fc-WM-u46"/>
                 <constraint firstItem="lBG-vn-v0Z" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="E4d-dn-nSt"/>
