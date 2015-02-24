@@ -8,7 +8,6 @@
             <connections>
                 <outlet property="dropboxLinkButton" destination="EKZ-n9-3fU" id="AiF-Pa-vYd"/>
                 <outlet property="resolutionPickerButton" destination="XZV-zW-vDK" id="0II-7t-ada"/>
-                <outlet property="syncSettingButton" destination="HZh-yq-tCT" id="ug8-fe-Is6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,23 +16,10 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKZ-n9-3fU">
-                    <rect key="frame" x="230" y="183" width="140" height="44"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="44" id="6hg-VV-Nvd"/>
-                    </constraints>
-                    <state key="normal" title="Connect to Dropbox">
-                        <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="connectToDropbox:" destination="-1" eventType="touchUpInside" id="o4a-oR-abm"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9n-ej-jUd">
-                    <rect key="frame" x="233" y="309" width="140" height="44"/>
+                    <rect key="frame" x="233" y="278" width="140" height="44"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="899-Vy-hbn"/>
+                        <constraint firstAttribute="height" constant="44" id="ght-y1-LVp"/>
                     </constraints>
                     <state key="normal" title="Choose Sync Folder">
                         <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -57,23 +43,10 @@
                         <action selector="closeSettings:" destination="-1" eventType="touchUpInside" id="gh7-h8-zBS"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZh-yq-tCT">
-                    <rect key="frame" x="203" y="246" width="195" height="44"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="195" id="ZQj-QQ-lls"/>
-                    </constraints>
-                    <state key="normal" title="Sync Over WiFi and Cellular">
-                        <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="changeNetworkSyncSetting:" destination="-1" eventType="touchUpInside" id="zYf-mv-fhF"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZV-zW-vDK">
-                    <rect key="frame" x="228" y="372" width="145" height="44"/>
+                    <rect key="frame" x="228" y="362" width="145" height="44"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="2i1-4O-jIH"/>
+                        <constraint firstAttribute="height" constant="44" id="PKC-FQ-pEB"/>
                     </constraints>
                     <state key="normal" title="Enable Hi-Resolution">
                         <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -83,22 +56,32 @@
                         <action selector="changePictureResolution:" destination="-1" eventType="touchUpInside" id="KW7-kx-ceY"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKZ-n9-3fU">
+                    <rect key="frame" x="230" y="194" width="140" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="TaZ-NV-oXI"/>
+                    </constraints>
+                    <state key="normal" title="Connect to Dropbox">
+                        <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="connectToDropbox:" destination="-1" eventType="touchUpInside" id="o4a-oR-abm"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.73510411920636765" green="1" blue="0.94562106876070429" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="centerY" secondItem="V9n-ej-jUd" secondAttribute="centerY" constant="-31" id="7YA-6v-Gp2"/>
-                <constraint firstAttribute="centerY" secondItem="XZV-zW-vDK" secondAttribute="centerY" constant="-94" id="EnB-HO-FcB"/>
+                <constraint firstItem="V9n-ej-jUd" firstAttribute="top" secondItem="EKZ-n9-3fU" secondAttribute="bottom" constant="40" id="1Vc-S2-DE1"/>
+                <constraint firstItem="EKZ-n9-3fU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="316-H1-sgz"/>
                 <constraint firstItem="0J6-nC-jvS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="GWY-fW-vLH"/>
-                <constraint firstAttribute="centerX" secondItem="XZV-zW-vDK" secondAttribute="centerX" constant="-0.5" id="PqE-mj-mZT"/>
-                <constraint firstItem="V9n-ej-jUd" firstAttribute="top" secondItem="HZh-yq-tCT" secondAttribute="bottom" constant="19" id="R42-nt-Ine"/>
-                <constraint firstItem="HZh-yq-tCT" firstAttribute="top" secondItem="EKZ-n9-3fU" secondAttribute="bottom" constant="19" id="Wxt-Yh-gaL"/>
-                <constraint firstItem="HZh-yq-tCT" firstAttribute="centerX" secondItem="EKZ-n9-3fU" secondAttribute="centerX" id="Y3e-st-6c9"/>
+                <constraint firstItem="XZV-zW-vDK" firstAttribute="top" secondItem="V9n-ej-jUd" secondAttribute="bottom" constant="40" id="Qeo-jo-qZ6"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="0J6-nC-jvS" secondAttribute="bottom" constant="8" id="b5K-HU-8kx"/>
-                <constraint firstAttribute="centerX" secondItem="V9n-ej-jUd" secondAttribute="centerX" constant="-3" id="bC5-RU-Ypf"/>
-                <constraint firstAttribute="centerY" secondItem="EKZ-n9-3fU" secondAttribute="centerY" constant="95" id="bdc-oL-OQr"/>
                 <constraint firstAttribute="bottom" secondItem="0J6-nC-jvS" secondAttribute="bottom" constant="8" id="fDQ-JU-iFR"/>
-                <constraint firstAttribute="centerX" secondItem="EKZ-n9-3fU" secondAttribute="centerX" id="ln2-xR-4Qm"/>
+                <constraint firstItem="V9n-ej-jUd" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hs1-aA-6Zs"/>
                 <constraint firstItem="0J6-nC-jvS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="qxX-lj-mG1"/>
+                <constraint firstItem="XZV-zW-vDK" firstAttribute="centerX" secondItem="EKZ-n9-3fU" secondAttribute="centerX" id="s4g-yX-ggz"/>
+                <constraint firstItem="XZV-zW-vDK" firstAttribute="trailing" secondItem="V9n-ej-jUd" secondAttribute="trailing" id="zg1-M4-fRK"/>
             </constraints>
         </view>
     </objects>
