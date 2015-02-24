@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Pic in a Box.xcodeproj">
+      location = "self:CloudCam.xcodeproj">
    </FileRef>
 </Workspace>

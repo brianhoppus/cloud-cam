@@ -37,13 +37,13 @@
 /* Begin PBXFileReference section */
 		D34A05A71A900F4000D2581A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D34A05A91A9108B800D2581A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		D3E4E0811A7BE77300BAAEEB /* Pic in a Box.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pic in a Box.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3E4E0811A7BE77300BAAEEB /* CloudCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E4E0851A7BE77300BAAEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3E4E0861A7BE77300BAAEEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D3E4E0881A7BE77300BAAEEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D3E4E0891A7BE77300BAAEEB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D3E4E0911A7BE77400BAAEEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D3E4E09A1A7BE77400BAAEEB /* Pic in a BoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pic in a BoxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3E4E09A1A7BE77400BAAEEB /* CloudCamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudCamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E4E09F1A7BE77400BAAEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3E4E0A01A7BE77400BAAEEB /* Pic_in_a_BoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pic_in_a_BoxTests.m; sourceTree = "<group>"; };
 		D3E4E0AA1A7BE81A00BAAEEB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -95,8 +95,8 @@
 		D3E4E0821A7BE77300BAAEEB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D3E4E0811A7BE77300BAAEEB /* Pic in a Box.app */,
-				D3E4E09A1A7BE77400BAAEEB /* Pic in a BoxTests.xctest */,
+				D3E4E0811A7BE77300BAAEEB /* CloudCam.app */,
+				D3E4E09A1A7BE77400BAAEEB /* CloudCamTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,9 +177,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D3E4E0801A7BE77300BAAEEB /* Pic in a Box */ = {
+		D3E4E0801A7BE77300BAAEEB /* CloudCam */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D3E4E0A41A7BE77400BAAEEB /* Build configuration list for PBXNativeTarget "Pic in a Box" */;
+			buildConfigurationList = D3E4E0A41A7BE77400BAAEEB /* Build configuration list for PBXNativeTarget "CloudCam" */;
 			buildPhases = (
 				D3E4E07D1A7BE77300BAAEEB /* Sources */,
 				D3E4E07E1A7BE77300BAAEEB /* Frameworks */,
@@ -189,14 +189,14 @@
 			);
 			dependencies = (
 			);
-			name = "Pic in a Box";
+			name = CloudCam;
 			productName = "Pic in a Box";
-			productReference = D3E4E0811A7BE77300BAAEEB /* Pic in a Box.app */;
+			productReference = D3E4E0811A7BE77300BAAEEB /* CloudCam.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D3E4E0991A7BE77400BAAEEB /* Pic in a BoxTests */ = {
+		D3E4E0991A7BE77400BAAEEB /* CloudCamTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D3E4E0A71A7BE77400BAAEEB /* Build configuration list for PBXNativeTarget "Pic in a BoxTests" */;
+			buildConfigurationList = D3E4E0A71A7BE77400BAAEEB /* Build configuration list for PBXNativeTarget "CloudCamTests" */;
 			buildPhases = (
 				D3E4E0961A7BE77400BAAEEB /* Sources */,
 				D3E4E0971A7BE77400BAAEEB /* Frameworks */,
@@ -207,9 +207,9 @@
 			dependencies = (
 				D3E4E09C1A7BE77400BAAEEB /* PBXTargetDependency */,
 			);
-			name = "Pic in a BoxTests";
+			name = CloudCamTests;
 			productName = "Pic in a BoxTests";
-			productReference = D3E4E09A1A7BE77400BAAEEB /* Pic in a BoxTests.xctest */;
+			productReference = D3E4E09A1A7BE77400BAAEEB /* CloudCamTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -236,7 +236,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D3E4E07C1A7BE77300BAAEEB /* Build configuration list for PBXProject "Pic in a Box" */;
+			buildConfigurationList = D3E4E07C1A7BE77300BAAEEB /* Build configuration list for PBXProject "CloudCam" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -249,8 +249,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D3E4E0801A7BE77300BAAEEB /* Pic in a Box */,
-				D3E4E0991A7BE77400BAAEEB /* Pic in a BoxTests */,
+				D3E4E0801A7BE77300BAAEEB /* CloudCam */,
+				D3E4E0991A7BE77400BAAEEB /* CloudCamTests */,
 			);
 		};
 /* End PBXProject section */
@@ -302,7 +302,7 @@
 /* Begin PBXTargetDependency section */
 		D3E4E09C1A7BE77400BAAEEB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D3E4E0801A7BE77300BAAEEB /* Pic in a Box */;
+			target = D3E4E0801A7BE77300BAAEEB /* CloudCam */;
 			targetProxy = D3E4E09B1A7BE77400BAAEEB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -396,7 +396,7 @@
 				);
 				INFOPLIST_FILE = "Pic in a Box/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CloudCam;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -413,7 +413,7 @@
 				);
 				INFOPLIST_FILE = "Pic in a Box/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CloudCam;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -432,7 +432,7 @@
 				);
 				INFOPLIST_FILE = "Pic in a BoxTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CloudCamTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pic in a Box.app/Pic in a Box";
 			};
 			name = Debug;
@@ -447,7 +447,7 @@
 				);
 				INFOPLIST_FILE = "Pic in a BoxTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CloudCamTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pic in a Box.app/Pic in a Box";
 			};
 			name = Release;
@@ -455,7 +455,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D3E4E07C1A7BE77300BAAEEB /* Build configuration list for PBXProject "Pic in a Box" */ = {
+		D3E4E07C1A7BE77300BAAEEB /* Build configuration list for PBXProject "CloudCam" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D3E4E0A21A7BE77400BAAEEB /* Debug */,
@@ -464,7 +464,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D3E4E0A41A7BE77400BAAEEB /* Build configuration list for PBXNativeTarget "Pic in a Box" */ = {
+		D3E4E0A41A7BE77400BAAEEB /* Build configuration list for PBXNativeTarget "CloudCam" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D3E4E0A51A7BE77400BAAEEB /* Debug */,
@@ -473,7 +473,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D3E4E0A71A7BE77400BAAEEB /* Build configuration list for PBXNativeTarget "Pic in a BoxTests" */ = {
+		D3E4E0A71A7BE77400BAAEEB /* Build configuration list for PBXNativeTarget "CloudCamTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D3E4E0A81A7BE77400BAAEEB /* Debug */,
