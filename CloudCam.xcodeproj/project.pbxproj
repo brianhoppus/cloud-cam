@@ -433,7 +433,7 @@
 				INFOPLIST_FILE = "Pic in a BoxTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = CloudCamTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pic in a Box.app/Pic in a Box";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CloudCam.app/CloudCam";
 			};
 			name = Debug;
 		};
@@ -448,7 +448,7 @@
 				INFOPLIST_FILE = "Pic in a BoxTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = CloudCamTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pic in a Box.app/Pic in a Box";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CloudCam.app/CloudCam";
 			};
 			name = Release;
 		};
