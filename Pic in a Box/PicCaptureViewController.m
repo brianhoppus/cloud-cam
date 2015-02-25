@@ -8,12 +8,15 @@
 
 #import "PicCaptureViewController.h"
 #import "SettingsViewController.h"
+#import "JGProgressHUD.h"
+#import "JGProgressHUDSuccessIndicatorView.h"
 
 @interface PicCaptureViewController ()
 
 @property (strong, nonatomic) UIImage *image;
 @property (strong, nonatomic) DBRestClient *restClient;
 @property (strong, nonatomic) NSDate *dateOfPicture;
+@property (strong, nonatomic) JGProgressHUD *uploadingHUD;
 
 @end
 
@@ -30,6 +33,9 @@
     self.cameraButton.layer.cornerRadius = 4;
     self.cameraButton.layer.borderWidth = 1;
     self.cameraButton.layer.borderColor = (__bridge CGColorRef)(self.cameraButton.backgroundColor);
+    
+    self.uploadingHUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
+    self.uploadingHUD.textLabel.text = @"Uploading";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,6 +77,21 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
 
 - (void)restClient:(DBRestClient *)client uploadFileFailedWithError:(NSError *)error {
     [self displayUploadError];
+}
+
+- (void)restClient:(DBRestClient *)client uploadProgress:(CGFloat)progress forFile:(NSString *)destPath from:(NSString *)srcPath {
+    if ([self.uploadingHUD isHidden]) {
+        [self.uploadingHUD showInView:self.view];
+    }
+    
+    if (progress == 1.0) {
+        [self.uploadingHUD dismissAfterDelay:0.3];
+        JGProgressHUD *successHUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
+        successHUD.textLabel.text = @"Image uploaded!";
+        successHUD.indicatorView = [[JGProgressHUDSuccessIndicatorView alloc] init];
+        [successHUD showInView:self.view];
+        [successHUD dismissAfterDelay:2.0];
+    }
 }
 
 #pragma mark - Private
