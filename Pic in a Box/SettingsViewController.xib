@@ -22,7 +22,7 @@
                         <constraint firstAttribute="height" constant="44" id="Qv6-lY-wR1"/>
                     </constraints>
                     <state key="normal" title="Choose Sync Folder">
-                        <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.28708599670000001" green="0.84705882349999995" blue="0.63961267550000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -49,7 +49,7 @@
                         <constraint firstAttribute="height" constant="44" id="CGr-b9-bSD"/>
                     </constraints>
                     <state key="normal" title="Connect to Dropbox">
-                        <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.28708599670000001" green="0.84705882349999995" blue="0.63961267550000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -62,7 +62,7 @@
                         <constraint firstAttribute="height" constant="44" id="GiN-PS-Kgd"/>
                     </constraints>
                     <state key="normal" title="Enable Hi-Resolution">
-                        <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.28708599670000001" green="0.84705882349999995" blue="0.63961267550000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
