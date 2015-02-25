@@ -17,9 +17,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9n-ej-jUd">
-                    <rect key="frame" x="233" y="278" width="140" height="44"/>
+                    <rect key="frame" x="230" y="278" width="140" height="44"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="ght-y1-LVp"/>
+                        <constraint firstAttribute="height" constant="44" id="Qv6-lY-wR1"/>
                     </constraints>
                     <state key="normal" title="Choose Sync Folder">
                         <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -43,23 +43,10 @@
                         <action selector="closeSettings:" destination="-1" eventType="touchUpInside" id="gh7-h8-zBS"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZV-zW-vDK">
-                    <rect key="frame" x="228" y="362" width="145" height="44"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="44" id="PKC-FQ-pEB"/>
-                    </constraints>
-                    <state key="normal" title="Enable Hi-Resolution">
-                        <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="changePictureResolution:" destination="-1" eventType="touchUpInside" id="KW7-kx-ceY"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKZ-n9-3fU">
-                    <rect key="frame" x="230" y="194" width="140" height="44"/>
+                    <rect key="frame" x="230" y="209" width="140" height="44"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="TaZ-NV-oXI"/>
+                        <constraint firstAttribute="height" constant="44" id="CGr-b9-bSD"/>
                     </constraints>
                     <state key="normal" title="Connect to Dropbox">
                         <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -69,19 +56,32 @@
                         <action selector="connectToDropbox:" destination="-1" eventType="touchUpInside" id="o4a-oR-abm"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZV-zW-vDK">
+                    <rect key="frame" x="228" y="347" width="145" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="GiN-PS-Kgd"/>
+                    </constraints>
+                    <state key="normal" title="Enable Hi-Resolution">
+                        <color key="titleColor" red="0.30980392159999998" green="0.84705882349999995" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="changePictureResolution:" destination="-1" eventType="touchUpInside" id="KW7-kx-ceY"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.73510411920636765" green="1" blue="0.94562106876070429" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="V9n-ej-jUd" firstAttribute="top" secondItem="EKZ-n9-3fU" secondAttribute="bottom" constant="40" id="1Vc-S2-DE1"/>
-                <constraint firstItem="EKZ-n9-3fU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="316-H1-sgz"/>
+                <constraint firstItem="EKZ-n9-3fU" firstAttribute="centerX" secondItem="V9n-ej-jUd" secondAttribute="centerX" id="5P1-w6-za8"/>
                 <constraint firstItem="0J6-nC-jvS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="GWY-fW-vLH"/>
-                <constraint firstItem="XZV-zW-vDK" firstAttribute="top" secondItem="V9n-ej-jUd" secondAttribute="bottom" constant="40" id="Qeo-jo-qZ6"/>
+                <constraint firstItem="EKZ-n9-3fU" firstAttribute="centerX" secondItem="XZV-zW-vDK" secondAttribute="centerX" id="Meu-D3-8Xt"/>
+                <constraint firstItem="V9n-ej-jUd" firstAttribute="top" secondItem="EKZ-n9-3fU" secondAttribute="bottom" constant="25" id="ank-4G-yna"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="0J6-nC-jvS" secondAttribute="bottom" constant="8" id="b5K-HU-8kx"/>
                 <constraint firstAttribute="bottom" secondItem="0J6-nC-jvS" secondAttribute="bottom" constant="8" id="fDQ-JU-iFR"/>
-                <constraint firstItem="V9n-ej-jUd" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hs1-aA-6Zs"/>
+                <constraint firstItem="V9n-ej-jUd" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gBu-Tp-AsH"/>
+                <constraint firstItem="EKZ-n9-3fU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gVH-ym-MEd"/>
                 <constraint firstItem="0J6-nC-jvS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="qxX-lj-mG1"/>
-                <constraint firstItem="XZV-zW-vDK" firstAttribute="centerX" secondItem="EKZ-n9-3fU" secondAttribute="centerX" id="s4g-yX-ggz"/>
-                <constraint firstItem="XZV-zW-vDK" firstAttribute="trailing" secondItem="V9n-ej-jUd" secondAttribute="trailing" id="zg1-M4-fRK"/>
+                <constraint firstItem="XZV-zW-vDK" firstAttribute="top" secondItem="V9n-ej-jUd" secondAttribute="bottom" constant="25" id="snj-oh-ON3"/>
             </constraints>
         </view>
     </objects>
