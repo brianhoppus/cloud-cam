@@ -17,9 +17,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9n-ej-jUd">
-                    <rect key="frame" x="230" y="278" width="140" height="44"/>
+                    <rect key="frame" x="222" y="278" width="157" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="Qv6-lY-wR1"/>
+                        <constraint firstAttribute="width" constant="157" id="bpO-7Z-ESy"/>
                     </constraints>
                     <state key="normal" title="Choose Sync Folder">
                         <color key="titleColor" red="0.28708599670000001" green="0.84705882349999995" blue="0.63961267550000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -44,9 +45,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKZ-n9-3fU">
-                    <rect key="frame" x="230" y="209" width="140" height="44"/>
+                    <rect key="frame" x="222" y="209" width="157" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="CGr-b9-bSD"/>
+                        <constraint firstAttribute="width" constant="157" id="b6n-GK-KNc"/>
                     </constraints>
                     <state key="normal" title="Connect to Dropbox">
                         <color key="titleColor" red="0.28708599670000001" green="0.84705882349999995" blue="0.63961267550000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -57,8 +59,9 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZV-zW-vDK">
-                    <rect key="frame" x="228" y="347" width="145" height="44"/>
+                    <rect key="frame" x="222" y="347" width="157" height="44"/>
                     <constraints>
+                        <constraint firstAttribute="width" constant="157" id="A7i-lc-tiT"/>
                         <constraint firstAttribute="height" constant="44" id="GiN-PS-Kgd"/>
                     </constraints>
                     <state key="normal" title="Enable Hi-Resolution">
