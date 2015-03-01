@@ -16,13 +16,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygA-eG-han">
-                    <rect key="frame" x="8" y="548" width="60" height="44"/>
+                    <rect key="frame" x="8" y="548" width="80" height="44"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="60" id="eMW-pn-TQn"/>
+                        <constraint firstAttribute="width" constant="80" id="eMW-pn-TQn"/>
                         <constraint firstAttribute="height" constant="44" id="lB8-ru-gbb"/>
                     </constraints>
                     <state key="normal" title="Settings">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="0.73510411919999996" green="1" blue="0.94562106879999996" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -31,7 +31,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBG-vn-v0Z">
                     <rect key="frame" x="222" y="278" width="157" height="44"/>
-                    <color key="backgroundColor" red="0.83921568627450982" green="0.97647058823529409" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.73510411919999996" green="1" blue="0.94562106879999996" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="157" id="mn8-4g-E9R"/>
                         <constraint firstAttribute="height" constant="44" id="qbC-HZ-Llb"/>
