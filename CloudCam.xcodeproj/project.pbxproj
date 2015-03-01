@@ -444,6 +444,7 @@
 			baseConfigurationReference = FF0C3994D927849D2DEA8382 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -451,6 +452,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Pic in a Box/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = CloudCam;
 				PROVISIONING_PROFILE = "";
@@ -462,6 +464,7 @@
 			baseConfigurationReference = F7971C25B652D16B9962B20A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brian Saunders (A8329A4GAH)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -469,6 +472,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Pic in a Box/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = CloudCam;
 				PROVISIONING_PROFILE = "";
